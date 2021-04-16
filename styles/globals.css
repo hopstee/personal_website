@@ -1,16 +1,91 @@
-html,
-body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.main-text-color {
+    @apply text-green-800;
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
+.main-border-color {
+    @apply border-gray-200;
 }
 
-* {
-  box-sizing: border-box;
+.main-border-color:focus {
+    @apply border-green-700;
+    @apply ring-green-700;
+    @apply ring-opacity-50;
+    @apply ring-4;
+    @apply outline-none;
+}
+
+.main-btn-color {
+    @apply bg-green-800;
+}
+
+.main-btn-color:hover {
+    @apply bg-green-900;
+}
+
+.second-btn-color {
+    @apply bg-gray-200;
+}
+
+.second-btn-color:hover {
+    @apply bg-gray-300;
+}
+
+.card-wrapper {
+    @apply mb-3;
+    @apply w-full;
+}
+
+.card {
+    @apply bg-white;
+    @apply rounded-xl;
+    @apply w-full;
+    @apply border;
+    @apply border-gray-200;
+}
+
+.card-header {
+    @apply font-semibold;
+    @apply p-4;
+    @apply border-b;
+    @apply border-gray-200;
+}
+
+.card-body {
+    @apply p-2;
+}
+
+.nav-link {
+    @apply w-12;
+    @apply h-12;
+    @apply flex;
+    @apply items-center;
+    @apply justify-center;
+    @apply text-gray-100;
+    @apply cursor-pointer;
+    @apply rounded-xl;
+}
+
+.nav-link:hover {
+    @apply bg-gray-600;
+}
+    
+/* @media (min-width: 640px) {
+    .sm\:bg-gradient-brand {
+        background-image: linear-gradient(blue, green);
+    }
+} */
+    
+@media  (min-width: 768px) {
+    .card-wrapper {
+        @apply mb-6;
+    }
+
+    .nav-link {
+        @apply w-16;
+        @apply h-16;
+    }
 }

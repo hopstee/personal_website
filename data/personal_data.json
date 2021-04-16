@@ -1,0 +1,123 @@
+{
+    "personal": {
+        "name": "Eduard Krivovyashchuk",
+        "bio": "A developer and tech-minded guy.",
+        "age": 21,
+        "phone": "+37368098954",
+        "email": "hopsteee@gmail.com",
+        "city": "Chisinau",
+        "country": "Moldova",
+        "start_work": "2019-04-23"
+    },
+    "about": "I am developing web applications, learning new technologies and passionate about sports.",
+    "experience": [
+        {
+            "id": "experience-0",
+            "position": "Software Developer",
+            "company": "Unifun International",
+            "city": "Chisinau",
+            "about": "Developed bulletin board using the Laravel framework and employee accounting system using Reactjs",
+            "time": {
+                "from": "Apr 2019",
+                "to": "Apr 2020"
+            }
+        },
+        {
+            "id": "experience-1",
+            "position": "Software Developer",
+            "company": "Cyber Whale",
+            "city": "Chisinau",
+            "about": "Developed Video and Audio streaming platform using Codeigniter framework",
+            "time": {
+                "from": "Apr 2020",
+                "to": "Nov 2020"
+            }
+        },
+        {
+            "id": "experience-2",
+            "position": "Software Developer",
+            "company": "Ilab",
+            "city": "Chisinau",
+            "about": "Develop web applications and web sites",
+            "time": {
+                "from": "Dec 2020",
+                "to": "Present"
+            }
+        } 
+    ],
+    "studies": [
+        {
+            "id": "studies-0",
+            "grade": "Bachelor",
+            "university": "Technical University of Moldova",
+            "city": "Chisinau",
+            "about": "I study Computers and Networks speciality",
+            "time": {
+                "from": "Sep 2018",
+                "to": "Present"
+            }
+        }
+    ],
+    "certificates": [],
+    "skills": [
+        {
+            "id": "skills-0",
+            "title": "PHP",
+            "level": "Working knowledge"
+        },
+        {
+            "id": "skills-1",
+            "title": "MySQL",
+            "level": "Working knowledge"
+        },
+        {
+            "id": "skills-2",
+            "title": "JavaScript",
+            "level": "Working knowledge"
+        },
+        {
+            "id": "skills-3",
+            "title": "Linux",
+            "level": "Working knowledge"
+        },
+        {
+            "id": "skills-4",
+            "title": "GIT",
+            "level": "Working knowledge"
+        },
+        {
+            "id": "skills-5",
+            "title": "ReactJS",
+            "level": "Basic knowledge"
+        },
+        {
+            "id": "skills-6",
+            "title": "Rust",
+            "level": "Basic knowledge"
+        }
+    ],
+    "links": [
+        {
+            "id": "link-0",
+            "title": "GitHub",
+            "link": "https://github.com/hopstee"
+        },
+        {
+            "id": "link-1",
+            "title": "LinkedIn",
+            "link": "https://www.linkedin.com/in/eduard-krivovyashchuk-a182aa197?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BA5KV7C%2FrRzmz1lO9npNgLg%3D%3D"
+        }
+    ],
+    "languages": [
+        {
+            "id": "languages-0",
+            "title": "Russian",
+            "level": "Native"
+        },
+        {
+            "id": "languages-1",
+            "title": "English",
+            "level": "Speek and search information"
+        }
+    ]
+}
