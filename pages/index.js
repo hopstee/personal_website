@@ -3,8 +3,7 @@ import Image from 'next/image'
 
 import Info from '../components/info/Info'
 import Level from '../components/level/Level'
-import Experience from '../components/experience/Experience'
-import Studies from '../components/studies/Studies'
+import Text from '../components/text/Text'
 
 import EmailIcon from '../assets/svg/email.svg';
 import TimeIcon from '../assets/svg/time.svg';
@@ -60,10 +59,10 @@ function Home() {
                                     </div>
                                     <div className="card-body">
                                         {resume.experience.map(item => (
-                                            <Experience  
+                                            <Text  
                                                 key={item.id}
                                                 position={item.position}
-                                                company={item.company}
+                                                institution={item.company}
                                                 city={item.city}
                                                 date={item.time}
                                                 desc={item.about}
@@ -79,10 +78,10 @@ function Home() {
                                     </div>
                                     <div className="card-body">
                                         {resume.studies.map(item => (
-                                            <Studies 
+                                            <Text 
                                                 key={item.id}
-                                                grade={item.grade}
-                                                university={item.university}
+                                                position={item.grade}
+                                                institution={item.university}
                                                 city={item.city}
                                                 date={item.time}
                                                 desc={item.about}
@@ -124,7 +123,7 @@ function Home() {
                                     <div className="card-body">
                                         <div className="flex flex-wrap">
                                             {resume.links.map(item => (
-                                                <a href={item.link} target="blank">
+                                                <a href={item.link} target="blank" className="relative w-full sm:w-auto">
                                                     <Info
                                                         key={item.id}
                                                         icon={<External_link className="w-6 h-6 main-text-color" />}

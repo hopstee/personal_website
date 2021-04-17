@@ -6,7 +6,7 @@ const Info = (props) => {
                     {props.icon}
                 </div>
                 <div className="flex sm:block flex-col items-center sm:ml-2">
-                    <p className="">
+                    <p className="text-gray-700">
                         {props.name}
                     </p>
                     <p className="text-sm text-gray-500">

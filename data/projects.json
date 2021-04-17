@@ -1,0 +1,55 @@
+{
+    "personal": [
+        {
+            "title": "Personal web site",
+            "stack": [
+                "JavaScript",
+                "NextJS framework",
+                "NodeJS backend",
+                "Tailwind css"
+            ],
+            "link": "",
+            "code": "https://github.com/hopstee/personal_website"
+        }
+    ],
+    "participated_in": [
+        {
+            "title": "Mercado Gratis",
+            "stack": [
+                "PHP",
+                "Laravel framework",
+                "MySQL database",
+                "JavaScript",
+                "Bootstrap css"
+            ],
+            "link": "https://mercado.gratis/",
+            "code": ""
+        },
+        {
+            "title": "Sportiks",
+            "stack": [
+                "PHP",
+                "Codeigniter framework",
+                "MySQL database",
+                "JavaScript",
+                "Bootstrap css"
+            ],
+            "link": "https://www.sportiks.me/",
+            "code": ""
+        },
+        {
+            "title": "EVPoint",
+            "stack": [
+                "PHP",
+                "Codeigniter framework",
+                "MySQL database",
+                "JavaScript",
+                "JQuery framework",
+                "WebSocket",
+                "Bootstrap css"
+            ],
+            "link": "https://evpoint.md/",
+            "code": ""
+        }
+    ]
+}
