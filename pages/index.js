@@ -10,32 +10,23 @@ import TimeIcon from '../assets/svg/time.svg';
 import External_link from '../assets/svg/external_link.svg';
 import DownloadIcon from '../assets/svg/download.svg';
 
-import { server } from '../config/index'
+// import { server } from '../config/index'
 // import resume from '../data/personal_data.json'
 
-const downloadResume = async(e) => {
-    e.preventDefault();
+// export async function getServerSideProps() {
+//     const res = await fetch(`${server}/api/personal`)
+//     const resume_data = await res.json();
+    
+//     return {
+//         props: {
+//             resume: resume_data.data
+//         }
+//     }
+// }
 
-    const res = await fetch('/api/download_resume')
-    const result = await res.json();
-
-    console.log(result);
-}
-
-export async function getServerSideProps() {
-    const res = await fetch(`${server}/api/personal`)
-    const resume_data = await res.json();
-    const resume = resume_data.data;
-
-    return {
-        props: {
-            resume
-        }
-    }
-}
-
-function Home({ resume }) {
-
+function Home() {
+    const resume = require('../data/personal_data.json')
+    
     const date = new Date().getTime() - new Date(resume.personal.start_work).getTime();
     const till_today = new Date(date);
     const years = till_today.getFullYear() - 1970;
