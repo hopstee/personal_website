@@ -18,13 +18,13 @@ var personal_data;
 var projects_data;
 
 // read personal_data.json file
-fs.readFile(process.cwd() + '/data/personal_data.json', 'utf8', function(err, data) {
+fs.readFile('/data/personal_data.json', 'utf8', function(err, data) {
     if(err) throw err;
     personal_data = JSON.parse(data);
 });
 
 // read projects.json file
-fs.readFile(process.cwd() + '/data/projects.json', 'utf8', function(err, data) {
+fs.readFile('/data/projects.json', 'utf8', function(err, data) {
     if(err) throw err;
     projects_data = JSON.parse(data);
 });
