@@ -4,7 +4,7 @@ import Project from '../components/project/Project'
 
 import { server } from '../config/index'
 
-export async function getStaticProps() {
+export async function getServerSideProps() {
     const res = await fetch(`${server}/api/projects`)
     const projects_data = await res.json();
     const projects = projects_data.data;
@@ -16,7 +16,7 @@ export async function getStaticProps() {
     }
 }
 
-export default function Home({ projects }) {
+export default function Projects({ projects }) {
     return (
         <>
             <Head>

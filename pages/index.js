@@ -22,7 +22,7 @@ const downloadResume = async(e) => {
     console.log(result);
 }
 
-export async function getStaticProps() {
+export async function getServerSideProps() {
     const res = await fetch(`${server}/api/personal`)
     const resume_data = await res.json();
     const resume = resume_data.data;

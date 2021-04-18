@@ -11,7 +11,7 @@ const nodemailer = require('nodemailer')
 require('dotenv').config()
 const EMAIL_ADDR = process.env.EMAIL_ADDR
 const EMAIL_PASS = process.env.EMAIL_PASS
-const PORT = process.env.PORT
+const PORT = process.env.PORT || 3001;
 
 const fs = require('fs')
 var personal_data;
