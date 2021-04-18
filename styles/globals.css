@@ -3,8 +3,21 @@
 @tailwind utilities;
 @tailwind colors;
 
+.wrapper {
+    @apply min-h-full;
+    @apply flex;
+    @apply flex-col;
+}
+
+.container {
+    @apply flex;
+    @apply flex-col;
+    @apply justify-between;
+    @apply m-3;
+}
+
 .main-text-color {
-    @apply text-indigo-700;
+    @apply text-blue-500;
 }
 
 .main-border-color {
@@ -12,8 +25,8 @@
 }
 
 .main-border-color:focus {
-    @apply border-indigo-700;
-    @apply ring-indigo-700;
+    @apply border-blue-500;
+    @apply ring-blue-500;
     @apply ring-opacity-25;
     @apply ring-4;
     @apply outline-none;
@@ -65,6 +78,7 @@
 }
 
 .nav-link {
+    @apply relative;
     @apply w-12;
     @apply h-12;
     @apply flex;
@@ -79,6 +93,37 @@
 
 .nav-link:hover {
     @apply bg-gray-600;
+}
+
+.tooltip {
+    @apply hidden;
+    @apply absolute;
+    @apply text-sm;
+    left: 90px;
+    @apply py-1;
+    @apply px-3;
+    @apply rounded-md;
+    @apply bg-gray-700;
+    @apply whitespace-nowrap;
+    @apply transition-all;
+    @apply duration-100;
+    @apply transform;
+    @apply -translate-x-8;
+    @apply opacity-0;
+}
+
+.tooltip::before {
+    content: "";
+    @apply w-3.5;
+    @apply h-3.5;
+    @apply bg-gray-700;
+    @apply absolute;
+    left: -4px;
+    @apply top-1/2;
+    @apply rounded;
+    @apply transform;
+    @apply rotate-45;
+    @apply -translate-y-1/2;
 }
     
 /* @media (min-width: 640px) {
@@ -95,5 +140,13 @@
     .nav-link {
         @apply w-16;
         @apply h-16;
+    }
+}
+
+@media (min-width: 1280px) {
+    .nav-link:hover .tooltip {
+        @apply block;
+        @apply translate-x-0;
+        @apply opacity-100;
     }
 }

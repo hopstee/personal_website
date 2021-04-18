@@ -20,17 +20,16 @@ const Mail = () => {
         }
 
         const res = await fetch('/api/sendmail', {
-                method: 'POST',
-                body: JSON.stringify({
-                    name: name,
-                    email: email,
-                    message: message
-                }),
-                headers: {
-                    'Content-Type': 'application/json'
-                }
+            method: 'POST',
+            body: JSON.stringify({
+                name: name,
+                email: email,
+                message: message
+            }),
+            headers: {
+                'Content-Type': 'application/json'
             }
-        )
+        })
     
         const result = await res.json()
 
@@ -63,7 +62,7 @@ const Mail = () => {
         <div className="w-full h-full md:h-screen">
             <div className="flex items-center w-full h-full">
                 <div className="w-full p-3 sm:p-6 md:p-0">
-                    <div className="relative bg-white md:w-2/3 lg:w-1/3 rounded-xl mx-auto">
+                    <div className="relative bg-white md:w-2/3 xl:w-1/3 rounded-xl mx-auto">
                         <div className="card">
                             <div className="card-body">
                                 <form onSubmit={submitForm} className="p-2">

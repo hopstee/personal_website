@@ -11,13 +11,47 @@ const nodemailer = require('nodemailer')
 require('dotenv').config()
 const EMAIL_ADDR = process.env.EMAIL_ADDR
 const EMAIL_PASS = process.env.EMAIL_PASS
+const PORT = process.env.PORT
+
+const fs = require('fs')
+var personal_data;
+var projects_data;
+
+// read personal_data.json file
+fs.readFile(process.cwd() + '/data/personal_data.json', 'utf8', function(err, data) {
+    if(err) throw err;
+    personal_data = JSON.parse(data);
+});
+
+// read projects.json file
+fs.readFile(process.cwd() + '/data/projects.json', 'utf8', function(err, data) {
+    if(err) throw err;
+    projects_data = JSON.parse(data);
+});
     
 app.prepare()
 .then(() => {
     const server = express()
 
+    server.get('/api/personal', (req ,res) => {
+        res.status(200).json({
+            data: personal_data
+        })
+    });
+
+    server.get('/api/projects', (req ,res) => {
+        res.status(200).json({
+            data: projects_data
+        })
+    });
+
+    server.get('/api/download_resume', (req ,res) => {
+        res.status(200).json({
+            data: 'hello'
+        })
+    });
+
     server.use(bodyParser.json()).post('/api/sendmail', (req, res) => {
-        console.log(req)
         let name = req.body.name;
         let email = req.body.email;
         let message = req.body.message;
@@ -107,9 +141,9 @@ app.prepare()
         return handle(req, res)
     })
         
-    server.listen(3001, (err) => {
+    server.listen(PORT, (err) => {
         if (err) throw err
-        console.log('> Ready on http://localhost:3001')
+        console.log(`> Ready on http://localhost:${PORT}`)
     })
 })
 .catch((ex) => {

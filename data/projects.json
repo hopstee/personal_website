@@ -1,55 +1,66 @@
-{
-    "personal": [
-        {
-            "title": "Personal web site",
-            "stack": [
-                "JavaScript",
-                "NextJS framework",
-                "NodeJS backend",
-                "Tailwind css"
-            ],
-            "link": "",
-            "code": "https://github.com/hopstee/personal_website"
-        }
-    ],
-    "participated_in": [
-        {
-            "title": "Mercado Gratis",
-            "stack": [
-                "PHP",
-                "Laravel framework",
-                "MySQL database",
-                "JavaScript",
-                "Bootstrap css"
-            ],
-            "link": "https://mercado.gratis/",
-            "code": ""
-        },
-        {
-            "title": "Sportiks",
-            "stack": [
-                "PHP",
-                "Codeigniter framework",
-                "MySQL database",
-                "JavaScript",
-                "Bootstrap css"
-            ],
-            "link": "https://www.sportiks.me/",
-            "code": ""
-        },
-        {
-            "title": "EVPoint",
-            "stack": [
-                "PHP",
-                "Codeigniter framework",
-                "MySQL database",
-                "JavaScript",
-                "JQuery framework",
-                "WebSocket",
-                "Bootstrap css"
-            ],
-            "link": "https://evpoint.md/",
-            "code": ""
-        }
-    ]
-}
+[
+    {
+        "title": "Personal projects",
+        "projects": [
+            {
+                "title": "Personal web site",
+                "desc": "Personal resume site",
+                "stack": [
+                    "JavaScript",
+                    "JSON",
+                    "NextJS",
+                    "ExpressJS",
+                    "Tailwind"
+                ],
+                "link": "localhost",
+                "code": "https://github.com/hopstee/personal_website"
+            }
+        ]
+    },
+    {
+        "title": "Other projects",
+        "projects": [    
+            {
+                "title": "Mercado Gratis",
+                "desc": "Bulletin board",
+                "stack": [
+                    "PHP",
+                    "Laravel",
+                    "MySQL",
+                    "JavaScript",
+                    "Bootstrap"
+                ],
+                "link": "https://mercado.gratis/",
+                "code": ""
+            },
+            {
+                "title": "Sportiks",
+                "desc": "Sports audio and video content streaming service",
+                "stack": [
+                    "PHP",
+                    "Codeigniter",
+                    "MySQL",
+                    "JavaScript",
+                    "Bootstrap"
+                ],
+                "link": "https://www.sportiks.me/",
+                "code": ""
+            },
+            {
+                "title": "EVPoint",
+                "desc": "Electric car charging software",
+                "stack": [
+                    "PHP",
+                    "Codeigniter",
+                    "MySQL",
+                    "JavaScript",
+                    "JQuery",
+                    "WebSocket",
+                    "Bootstrap"
+                ],
+                "link": "https://evpoint.md/",
+                "code": ""
+            }
+        ]
+    }
+]
