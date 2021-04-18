@@ -7,6 +7,9 @@ const NotFound = () => {
         <>
             <Head>
                 <title>Page Not Found</title>
+                <meta name="description" content="Page Not found"></meta>
+                <meta name="author" content="Eduard Krivovyashchuk"></meta>
+                <meta name="viewport" content="width=device-width, initial-scale=1.0"></meta>
                 <link rel="icon" href="/favicon.ico" />
             </Head>
             <div className="w-full h-full md:pt-24 flex flex-col items-center justify-center">

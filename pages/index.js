@@ -36,6 +36,10 @@ function Home() {
         <>
             <Head>
                 <title>Resume</title>
+                <meta name="keywords" content="HTML, CSS, JavaScript, Resume"></meta>
+                <meta name="description" content="Personal website"></meta>
+                <meta name="author" content="Eduard Krivovyashchuk"></meta>
+                <meta name="viewport" content="width=device-width, initial-scale=1.0"></meta>
                 <link rel="icon" href="/favicon.ico" />
             </Head>
             <div className="wrapper">

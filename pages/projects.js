@@ -24,6 +24,10 @@ export default function Projects() {
             <Head>
                 <title>Projects</title>
                 <link rel="icon" href="/favicon.ico" />
+                <meta name="keywords" content="HTML, CSS, JavaScript, Projects"></meta>
+                <meta name="description" content="Projects"></meta>
+                <meta name="author" content="Eduard Krivovyashchuk"></meta>
+                <meta name="viewport" content="width=device-width, initial-scale=1.0"></meta>
             </Head>
             <div className="wrapper">
                 <div className="inline-flex flex-col md:space-y-0 md:space-x-6 md:flex-row justify-between m-3 md:m-6 lg:w-4/5 xl:w-4/6 2xl:w-1/2 lg:mx-auto">
