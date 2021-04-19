@@ -1,5 +1,7 @@
-const SENDGRID_API = 'https://api.sendgrid.com/v3/mail/send'
-const SENDGRID_API_KEY = ''
+require('dotenv').config()
+
+const SENDGRID_API = process.env.SENDGRID_API
+const SENDGRID_API_KEY = process.env.SENDGRID_API_KEY
 
 const sendEmail = async ({ from, name, to, message }) => {
     await fetch(SENDGRID_API, {
