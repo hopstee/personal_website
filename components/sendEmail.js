@@ -1,6 +1,7 @@
 const SENDGRID_API = 'https://api.sendgrid.com/v3/mail/send'
+const SENDGRID_API_KEY = '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'
 
-const sendEmail = async ({ name, email }) => {
+const sendEmail = async ({ from, name, to, message }) => {
     await fetch(SENDGRID_API, {
         method: 'POST',
         headers: {
@@ -12,20 +13,20 @@ const sendEmail = async ({ name, email }) => {
             {
               to: [
                 {
-                  email
+                  to
                 }
               ],
-              subject: 'Demo success :)'
+              subject: 'Contact'
             }
           ],
           from: {
-            email: 'noreply@demo.com',
-            name: 'Test SendGrid'
+            email: from,
+            name: name
           },
           content: [
             {
               type: 'text/html',
-              value: `Congratulations <b>${name}</b>, you just sent an email with sendGrid`
+              value: message
             }
           ]
         })
