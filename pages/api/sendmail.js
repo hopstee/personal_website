@@ -5,8 +5,10 @@ const nodemailer = require('nodemailer')
 require('dotenv').config()
 const EMAIL_ADDR = process.env.EMAIL_ADDR
 const EMAIL_PASS = process.env.EMAIL_PASS
+const SENDGRID_API = process.env.SENDGRID_API
+const SENDGRID_API_KEY = process.env.SENDGRID_API_KEY
 
-export default function handler(req, res) {
+export default function async handler(req, res) {
     let name = req.body.name;
     let email = req.body.email;
     let message = req.body.message;
@@ -87,18 +89,43 @@ export default function handler(req, res) {
 //     sendgrid version
     
 //     sendgrid version
-    if(req.method === 'POST') {
-        const { from, name, to, message } = { email, name, EMAIL_ADDR, message };
-        await sendEmail({ from, name, to, message });
-        return res.status(200).json({
-            success: true
-        });
-    }
-    return res.status(404).json({
-        success: false
+    const send_email_res = await fetch(SENDGRID_API, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          Authorization: `Bearer ${SENDGRID_API_KEY}`
+        },
+        body: JSON.stringify({
+          personalizations: [
+            {
+              to: [
+                {
+                  to
+                }
+              ],
+              subject: 'Contact'
+            }
+          ],
+          from: {
+            email: from,
+            name: name
+          },
+          content: [
+            {
+              type: 'text/html',
+              value: message
+            }
+          ]
+        })
     });
     
+    if(send_email_res) {
+        return res.status(200).json({
+            success: true
+        })
+    }
+    
     res.status(200).json({
-        success: true
+        success: false
     })
 }
