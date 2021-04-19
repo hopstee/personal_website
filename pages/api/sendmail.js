@@ -89,7 +89,7 @@ export default function handler(req, res) {
 //     sendgrid version
     if(req.method === 'POST') {
         const { from, name, to, message } = { email, name, EMAIL_ADDR, message };
-        await sendEmail({ name, email });
+        await sendEmail({ from, name, to, message });
         return res.status(200).json({
             success: true
         });
