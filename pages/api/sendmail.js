@@ -1,3 +1,5 @@
+import { sendMail } from '../../components/sendEmail'
+
 const nodemailer = require('nodemailer')
 
 require('dotenv').config()
@@ -14,14 +16,14 @@ export default function handler(req, res) {
 
     // validate name
     if(name == '') {
-        res.status(200).json({ 
+        return res.status(200).json({ 
             success: false, 
             field: 'name',
             message: 'Name is required'
         })
     }
     if(!name_regexp.test(name)) {
-        res.status(200).json({ 
+        return res.status(200).json({ 
             success: false, 
             field: 'name',
             message: 'Please enter a valid name'
@@ -30,14 +32,14 @@ export default function handler(req, res) {
 
     // validate email
     if(email == '') {
-        res.status(200).json({ 
+        return res.status(200).json({ 
             success: false, 
             field: 'email',
             message: 'Email is required'
         })
     }
     if(!email_regexp.test(email)) {
-        res.status(200).json({ 
+        return res.status(200).json({ 
             success: false, 
             field: 'email',
             message: 'Please enter a valid email'
@@ -46,40 +48,56 @@ export default function handler(req, res) {
 
     // validate message
     if(message == '') {
-        res.status(200).json({ 
+        return res.status(200).json({ 
             success: false, 
             field: 'message',
             message: 'Message is required'
         })
     }
 
-    const transporter = nodemailer.createTransport({
-        port: 465,
-        host: "smtp.gmail.com",
-        auth: {
-            user: EMAIL_ADDR,
-            pass: EMAIL_PASS,
-        },
-        secure: true,
-    });
+//     nodemailer version
+//     const transporter = nodemailer.createTransport({
+//         port: 465,
+//         host: "smtp.gmail.com",
+//         auth: {
+//             user: EMAIL_ADDR,
+//             pass: EMAIL_PASS,
+//         },
+//         secure: true,
+//     });
 
-    const mailData = {
-        from: `${email}`,
-        to: EMAIL_ADDR,
-        subject: `Message From ${name}`,
-        text: 'Contact',
-        html: `<div>${message}</div>`
+//     const mailData = {
+//         from: `${email}`,
+//         to: EMAIL_ADDR,
+//         subject: `Message From ${name}`,
+//         text: 'Contact',
+//         html: `<div>${message}</div>`
+//     }
+
+//     transporter.sendMail(mailData, function (err, info) {
+//         if(err) {
+//             res.status(200).json({
+//                 success: false,
+//                 message: info
+//             })
+//         }
+//     })
+//     nodemailer version
+    
+//     sendgrid version
+    
+//     sendgrid version
+    if(req.method === 'POST') {
+        const { from, name, to, message } = { email, name, EMAIL_ADDR, message };
+        await sendEmail({ name, email });
+        return res.status(200).json({
+            success: true
+        });
     }
-
-    transporter.sendMail(mailData, function (err, info) {
-        if(err) {
-            res.status(200).json({
-                success: false,
-                message: info
-            })
-        }
-    })
-
+    return res.status(404).json({
+        success: false
+    });
+    
     res.status(200).json({
         success: true
     })
