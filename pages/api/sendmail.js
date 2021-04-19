@@ -1,14 +1,8 @@
-import { sendMail } from '../../components/sendEmail'
+import { sendEmail } from '../../utils/sendEmail'
 
 const nodemailer = require('nodemailer')
 
-require('dotenv').config()
-const EMAIL_ADDR = process.env.EMAIL_ADDR
-const EMAIL_PASS = process.env.EMAIL_PASS
-const SENDGRID_API = process.env.SENDGRID_API
-const SENDGRID_API_KEY = process.env.SENDGRID_API_KEY
-
-export default function async handler(req, res) {
+export default async function handler(req, res) {
     let name = req.body.name;
     let email = req.body.email;
     let message = req.body.message;
@@ -89,43 +83,9 @@ export default function async handler(req, res) {
 //     sendgrid version
     
 //     sendgrid version
-    const send_email_res = await fetch(SENDGRID_API, {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-          Authorization: `Bearer ${SENDGRID_API_KEY}`
-        },
-        body: JSON.stringify({
-          personalizations: [
-            {
-              to: [
-                {
-                  to
-                }
-              ],
-              subject: 'Contact'
-            }
-          ],
-          from: {
-            email: from,
-            name: name
-          },
-          content: [
-            {
-              type: 'text/html',
-              value: message
-            }
-          ]
-        })
-    });
+    await sendEmail({ email, name, message });
     
-    if(send_email_res) {
-        return res.status(200).json({
-            success: true
-        })
-    }
-    
-    res.status(200).json({
-        success: false
+    return res.status(200).json({
+        success: true
     })
 }

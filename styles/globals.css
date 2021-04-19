@@ -51,6 +51,10 @@
     background-color: #10B981 !important;
 }
 
+.error-bg-color {
+    background-color: #EF4444 !important;
+}
+
 .card-wrapper {
     @apply mb-3;
     @apply w-full;

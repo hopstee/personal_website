@@ -52,10 +52,19 @@ const Mail = () => {
             }, 2000);
         }
 
-        if(!result.success) {
+        if(!result.success && result.field !== null && typeof(result.field) !== 'undefined') {
             let el = document.getElementById(result.field)
 
             el.querySelector('.error-message').innerHTML = result.message
+        } else if(!result.success) {
+            let submit_btn = document.getElementById('email_submit_btn');
+            submit_btn.innerHTML = 'Error'
+            submit_btn.classList.add('error-bg-color')
+
+            setTimeout(function () {
+                submit_btn.innerHTML = 'Send'
+                submit_btn.classList.remove('error-bg-color')
+            }, 2000);
         }
     }
 
