@@ -1,5 +1,5 @@
 const SENDGRID_API = 'https://api.sendgrid.com/v3/mail/send'
-const SENDGRID_API_KEY = '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'
+const SENDGRID_API_KEY = ''
 
 const sendEmail = async ({ from, name, to, message }) => {
     await fetch(SENDGRID_API, {
