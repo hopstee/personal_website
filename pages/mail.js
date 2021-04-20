@@ -26,7 +26,9 @@ const Mail = () => {
         let name = e.target.name.value
         let email = e.target.email.value
         let message = e.target.message.value
-        let dataIsValid = false;
+        let dataIsValid = false
+
+        let submit_btn = document.getElementById('email_submit_btn')
         
         // check if all fields are valid
         dataIsValid = updateValidationMessages(nameValidator(name)) &&
@@ -35,6 +37,7 @@ const Mail = () => {
 
 
         if(dataIsValid) {
+            submit_btn.classList.add('loading_btn')
             const res = await fetch('/api/sendmail', {
                 method: 'POST',
                 body: JSON.stringify({
@@ -49,10 +52,11 @@ const Mail = () => {
         
             const result = await res.json()
 
+            submit_btn.classList.remove('loading_btn')
+
             if(result.success) {
                 e.target.reset()
     
-                let submit_btn = document.getElementById('email_submit_btn');
                 submit_btn.innerHTML = 'Email sent!'
                 submit_btn.classList.add('success-bg-color')
     
@@ -62,7 +66,6 @@ const Mail = () => {
                 }, 2000);
                 
             } else if(!result.success) {
-                let submit_btn = document.getElementById('email_submit_btn');
                 submit_btn.innerHTML = 'Error'
                 submit_btn.classList.add('error-bg-color')
     
