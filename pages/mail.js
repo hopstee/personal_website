@@ -1,70 +1,76 @@
 import Head from 'next/head'
 import Input from '../components/input/Input'
 
+import emailValidator from '../utils/validators/emailValidator'
+import nameValidator from '../utils/validators/nameValidator'
+import messageValidator from '../utils/validators/messageValidator'
+
+const updateValidationMessages = (toValidate) => {
+
+    let el = document.getElementById(toValidate.field)
+    let errorField = el.querySelector('.error-message')
+    
+    if(!toValidate.success) {
+        errorField.innerHTML = toValidate.message
+        return toValidate.success
+    }
+
+    errorField.innerHTML = ""
+    return toValidate.success
+}
+
 const Mail = () => {
     const submitForm = async (e) => { 
         e.preventDefault()
-        
-        let name = '';
-        if(typeof(e.target.name) !== 'undefined') {
-            name = e.target.name.value
-        }
-        
-        let email = '';
-        if(typeof(e.target.email) !== 'undefined') {
-            email = e.target.email.value
-        }
-        
-        let message = '';
-        if(typeof(e.target.message) !== 'undefined') {
-            message = e.target.message.value
-        }
 
-        const res = await fetch('/api/sendmail', {
-            method: 'POST',
-            body: JSON.stringify({
-                name: name,
-                email: email,
-                message: message
-            }),
-            headers: {
-                'Content-Type': 'application/json'
-            }
-        })
+        let name = e.target.name.value
+        let email = e.target.email.value
+        let message = e.target.message.value
+        let dataIsValid = false;
+        
+        // check if all fields are valid
+        dataIsValid = updateValidationMessages(nameValidator(name)) &&
+                      updateValidationMessages(emailValidator(email)) &&
+                      updateValidationMessages(messageValidator(message))
+
+
+        if(dataIsValid) {
+            const res = await fetch('/api/sendmail', {
+                method: 'POST',
+                body: JSON.stringify({
+                    name: name,
+                    email: email,
+                    message: message
+                }),
+                headers: {
+                    'Content-Type': 'application/json'
+                }
+            })
+        
+            const result = await res.json()
+
+            if(result.success) {
+                e.target.reset()
     
-        const result = await res.json()
-
-        let all_inputs = document.getElementsByClassName('input_error')
-        for(let i = 0; i < all_inputs.length; i++) {
-            all_inputs[i].querySelector('.error-message').innerHTML = ''
-        }
-
-        if(result.success) {
-            e.target.reset()
-
-            let submit_btn = document.getElementById('email_submit_btn');
-            submit_btn.innerHTML = 'Email sent!'
-            submit_btn.classList.add('success-bg-color')
-
-            setTimeout(function () {
-                submit_btn.innerHTML = 'Send'
-                submit_btn.classList.remove('success-bg-color')
-            }, 2000);
-        }
-
-        if(!result.success && result.field !== null && typeof(result.field) !== 'undefined') {
-            let el = document.getElementById(result.field)
-
-            el.querySelector('.error-message').innerHTML = result.message
-        } else if(!result.success) {
-            let submit_btn = document.getElementById('email_submit_btn');
-            submit_btn.innerHTML = 'Error'
-            submit_btn.classList.add('error-bg-color')
-
-            setTimeout(function () {
-                submit_btn.innerHTML = 'Send'
-                submit_btn.classList.remove('error-bg-color')
-            }, 2000);
+                let submit_btn = document.getElementById('email_submit_btn');
+                submit_btn.innerHTML = 'Email sent!'
+                submit_btn.classList.add('success-bg-color')
+    
+                setTimeout(function () {
+                    submit_btn.innerHTML = 'Send'
+                    submit_btn.classList.remove('success-bg-color')
+                }, 2000);
+                
+            } else if(!result.success) {
+                let submit_btn = document.getElementById('email_submit_btn');
+                submit_btn.innerHTML = 'Error'
+                submit_btn.classList.add('error-bg-color')
+    
+                setTimeout(function () {
+                    submit_btn.innerHTML = 'Send'
+                    submit_btn.classList.remove('error-bg-color')
+                }, 2000);
+            }
         }
     }
 
