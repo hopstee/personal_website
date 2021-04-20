@@ -3,6 +3,7 @@ import sendgrid from '@sendgrid/mail';
 require('dotenv').config()
 
 const EMAIL_ADDR = process.env.EMAIL_ADDR
+const EMAIL_ADDR_FROM = process.env.EMAIL_ADDR_FROM
 const SENDGRID_API_KEY = process.env.SENDGRID_API_KEY
 
 const nodemailer = require('nodemailer')
@@ -48,9 +49,9 @@ export default async function handler(req, res) {
     try {
         await sendgrid.send({
             to: EMAIL_ADDR,
-            from: email,
+            from: EMAIL_ADDR_FROM,
             subject: `${name} send email with contact form`,
-            text: message
+            text: `email: ${email}\nmessage: ${message}`
         });
     } catch (error) {
         return res.status(200).json({
