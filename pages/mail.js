@@ -84,12 +84,16 @@ const Mail = () => {
         <>
             
             <Head>
+                <html lang="en" />
                 <title>Send Email</title>
+                <meta name="keywords" content="HTML, CSS, JavaScript, resume developing, experience, github, developer, knowledge, projects"></meta>
                 <meta name="description" content="Contact me if you would like to work with me, say Hi, or ask a question."></meta>
                 <meta name="author" content="Eduard Krivovyashchuk"></meta>
+                <meta name="twitter:card" content="summary" ></meta>
                 <meta name="twitter:description" content="Contact me if you would like to work with me, say Hi, or ask a question."></meta> 
                 <meta name="twitter:title" content="Send Email" ></meta>
                 <meta name="viewport" content="width=device-width, initial-scale=1.0"></meta>
+                <link rel="canonical" href="https://edkr.site"></link>
                 <link rel="icon" href="/favicon.ico" />
             </Head>
             <div className="w-full h-full md:h-screen">

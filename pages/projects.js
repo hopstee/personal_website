@@ -22,13 +22,17 @@ export default function Projects() {
     return (
         <>
             <Head>
+                <html lang="en" />
                 <title>Projects</title>
-                <link rel="icon" href="/favicon.ico" />
+                <meta name="keywords" content="HTML, CSS, JavaScript, resume developing, experience, github, developer, knowledge, projects"></meta>
                 <meta name="description" content="List of my own projects and projects wich I participated"></meta>
                 <meta name="author" content="Eduard Krivovyashchuk"></meta>
+                <meta name="twitter:card" content="summary" ></meta>
                 <meta name="twitter:description" content="List of my own projects and projects wich I participated"></meta> 
                 <meta name="twitter:title" content="Projects" ></meta>
                 <meta name="viewport" content="width=device-width, initial-scale=1.0"></meta>
+                <link rel="canonical" href="https://edkr.site"></link>
+                <link rel="icon" href="/favicon.ico" />
             </Head>
             <div className="wrapper">
                 <div className="inline-flex flex-col md:space-y-0 md:space-x-6 md:flex-row justify-between m-3 md:m-6 lg:w-4/5 xl:w-4/6 2xl:w-1/2 lg:mx-auto">
