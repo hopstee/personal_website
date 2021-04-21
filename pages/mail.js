@@ -84,10 +84,12 @@ const Mail = () => {
         <>
             
             <Head>
-                <title>Resume</title>
+                <title>Send Email</title>
                 <meta name="keywords" content="HTML, CSS, JavaScript, Send email"></meta>
                 <meta name="description" content="Contact me if you would like to work with me, say Hi, or ask a question."></meta>
                 <meta name="author" content="Eduard Krivovyashchuk"></meta>
+                <meta name="twitter:description" content="Contact me if you would like to work with me, say Hi, or ask a question."></meta> 
+                <meta name="twitter:title" content="Send Email" ></meta>
                 <meta name="viewport" content="width=device-width, initial-scale=1.0"></meta>
                 <link rel="icon" href="/favicon.ico" />
             </Head>
@@ -98,9 +100,9 @@ const Mail = () => {
                             <div className="card">
                                 <div className="card-body">
                                     <form onSubmit={submitForm} className="p-2">
-                                        <div className="w-full text-center mt-4 uppercase text-lg font-semibold main-text-color">
+                                        <h1 className="w-full text-center mt-4 uppercase text-lg font-semibold main-text-color">
                                             Email me
-                                        </div>
+                                        </h1>
                                         <div>
                                             <Input 
                                                 title="Name" 

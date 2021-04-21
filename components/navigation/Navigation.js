@@ -7,8 +7,8 @@ import MailIcon from '../../assets/svg/mail.svg';
 const Navigation = () => {
     return (
         <div className="fixed bottom-0 md:top-0 left-0 h-auto w-full md:w-auto z-50">
-            <div className="md:h-full w-full flex md:flex-col justify-center bg-gray-700 p-2">
-                <div className="inline-flex flex-row md:flex-col space-x-2 md:space-x-0 md:space-y-2">
+            <div className="md:h-full w-full flex md:flex-col bg-gray-700 p-2">
+                <div className="flex md:inline-flex flex-row md:flex-col justify-evenly space-x-2 md:space-x-0 md:space-y-2 w-full">
                     <Link href="/">
                         <a className="nav-link">
                             <DocumentIcon className="h-8 w-8" />

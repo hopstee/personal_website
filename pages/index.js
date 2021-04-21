@@ -37,8 +37,10 @@ function Home() {
             <Head>
                 <title>Resume</title>
                 <meta name="keywords" content="HTML, CSS, JavaScript, Resume"></meta>
-                <meta name="description" content="Personal website"></meta>
+                <meta name="description" content="Personal website about my skills, grades, career, own projects and projects in which I participated"></meta>
                 <meta name="author" content="Eduard Krivovyashchuk"></meta>
+                <meta name="twitter:description" content="Personal website about my skills, grades, career, own projects and projects in which I participated"></meta> 
+                <meta name="twitter:title" content="Resume" ></meta>
                 <meta name="viewport" content="width=device-width, initial-scale=1.0"></meta>
                 <link rel="icon" href="/favicon.ico" />
             </Head>
@@ -60,9 +62,9 @@ function Home() {
                                     />
                                 </div>
                                 <div className="text-center pt-6">
-                                    <p className="uppercase text-lg font-semibold main-text-color">
+                                    <h1 className="uppercase text-lg font-semibold main-text-color">
                                         {resume.personal.name}
-                                    </p>
+                                    </h1>
                                     <p className="text-lg font-semibold text-gray-700">
                                         {resume.personal.bio}
                                     </p>
