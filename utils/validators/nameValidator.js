@@ -1,5 +1,5 @@
 const nameValidator = (name) => {
-    const name_regexp = /^([a-zA-Z]+?\s?)+$/
+    const name_regexp = /^([a-zа-яё]+?\s?)+$/iu
 
     if(name == '') {
         return { 
