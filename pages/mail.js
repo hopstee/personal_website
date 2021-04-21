@@ -85,7 +85,6 @@ const Mail = () => {
             
             <Head>
                 <title>Send Email</title>
-                <meta name="keywords" content="HTML, CSS, JavaScript, Send email"></meta>
                 <meta name="description" content="Contact me if you would like to work with me, say Hi, or ask a question."></meta>
                 <meta name="author" content="Eduard Krivovyashchuk"></meta>
                 <meta name="twitter:description" content="Contact me if you would like to work with me, say Hi, or ask a question."></meta> 

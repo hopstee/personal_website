@@ -6,6 +6,7 @@ const Layout = ({ children }) => {
         <div>
             <Head>
                 <html lang="en" />
+                <meta name="keywords" content="HTML, CSS, JavaScript, resume developing, experience, github, developer, knowledge, projects"></meta>
                 <meta name="twitter:card" content="summary" ></meta>
                 <link rel="canonical" href="https://edkr.site"></link>
             </Head>

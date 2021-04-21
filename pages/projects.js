@@ -24,7 +24,6 @@ export default function Projects() {
             <Head>
                 <title>Projects</title>
                 <link rel="icon" href="/favicon.ico" />
-                <meta name="keywords" content="HTML, CSS, JavaScript, Projects"></meta>
                 <meta name="description" content="List of my own projects and projects wich I participated"></meta>
                 <meta name="author" content="Eduard Krivovyashchuk"></meta>
                 <meta name="twitter:description" content="List of my own projects and projects wich I participated"></meta> 

@@ -1,3 +1,5 @@
+Sitemap: https://edkr.site/api/sitemap
+
 User-agent: *
 Allow: /*
 
