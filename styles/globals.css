@@ -128,6 +128,10 @@
     @apply rotate-45;
     @apply -translate-y-1/2;
 }
+
+.btn-loader .btn-icon {
+    display: flex !important;
+}
     
 /* @media (min-width: 640px) {
     .sm\:bg-gradient-brand {

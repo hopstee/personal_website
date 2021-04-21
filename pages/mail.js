@@ -5,6 +5,8 @@ import emailValidator from '../utils/validators/emailValidator'
 import nameValidator from '../utils/validators/nameValidator'
 import messageValidator from '../utils/validators/messageValidator'
 
+import SettingsIcon from '../assets/svg/settings.svg';
+
 const updateValidationMessages = (toValidate) => {
 
     let el = document.getElementById(toValidate.field)
@@ -29,6 +31,7 @@ const Mail = () => {
         let dataIsValid = false
 
         let submit_btn = document.getElementById('email_submit_btn')
+        let btn_text = submit_btn.querySelector('.btn-text')
         
         // check if all fields are valid
         dataIsValid = updateValidationMessages(nameValidator(name)) &&
@@ -37,7 +40,7 @@ const Mail = () => {
 
 
         if(dataIsValid) {
-            submit_btn.classList.add('loading_btn')
+            submit_btn.classList.add('btn-loader')
             const res = await fetch('/api/sendmail', {
                 method: 'POST',
                 body: JSON.stringify({
@@ -52,25 +55,25 @@ const Mail = () => {
         
             const result = await res.json()
 
-            submit_btn.classList.remove('loading_btn')
+            submit_btn.classList.remove('btn-loader')
 
             if(result.success) {
                 e.target.reset()
     
-                submit_btn.innerHTML = 'Email sent!'
+                btn_text.innerHTML = 'Email sent!'
                 submit_btn.classList.add('success-bg-color')
     
                 setTimeout(function () {
-                    submit_btn.innerHTML = 'Send'
+                    btn_text.innerHTML = 'Send'
                     submit_btn.classList.remove('success-bg-color')
                 }, 2000);
                 
             } else if(!result.success) {
-                submit_btn.innerHTML = 'Error'
+                btn_text.innerHTML = 'Error'
                 submit_btn.classList.add('error-bg-color')
     
                 setTimeout(function () {
-                    submit_btn.innerHTML = 'Send'
+                    btn_text.innerHTML = 'Send'
                     submit_btn.classList.remove('error-bg-color')
                 }, 2000);
             }
@@ -114,8 +117,13 @@ const Mail = () => {
                                             />
                                         </div>
                                         <div className="mt-8 flex justify-end">
-                                            <button type="submit" id="email_submit_btn" className="px-4 py-2 w-full md:w-auto main-btn-color rounded-lg focus:outline-none text-white transition-all duration-100">
-                                                Send
+                                            <button type="submit" id="email_submit_btn" className="relative px-4 py-2 w-full md:w-auto main-btn-color rounded-lg focus:outline-none text-white transition-all duration-100">
+                                                <span className="hidden btn-icon absolute top-0 left-0 rounded-lg flex items-center justify-center w-full h-full main-btn-color">
+                                                    <SettingsIcon className="w-6 h-6 animate-spin" />
+                                                </span>
+                                                <span className="btn-text">
+                                                    Send
+                                                </span>
                                             </button>
                                         </div>
                                     </form>
