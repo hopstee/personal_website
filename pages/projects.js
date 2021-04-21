@@ -26,7 +26,7 @@ export default function Projects() {
                 <title>Projects</title>
                 <meta name="keywords" content="HTML, CSS, JavaScript, resume developing, experience, github, developer, knowledge, projects"></meta>
                 <meta name="description" content="List of my own projects and projects wich I participated"></meta>
-                <meta name="author" content="Eduard Krivovyashchuk"></meta>
+                <meta name="author" content="Eduard Krivovyashchuk | Эдуард Кривовящук"></meta>
                 <meta name="twitter:card" content="summary" ></meta>
                 <meta name="twitter:description" content="List of my own projects and projects wich I participated"></meta> 
                 <meta name="twitter:title" content="Projects" ></meta>

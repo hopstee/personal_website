@@ -39,7 +39,7 @@ function Home() {
                 <title>Eduard Krivovyashchuk</title>
                 <meta name="keywords" content="HTML, CSS, JavaScript, resume developing, experience, github, developer, knowledge, projects"></meta>
                 <meta name="description" content="Personal resume website about my skills, education, career, own projects and projects in which I participated"></meta>
-                <meta name="author" content="Eduard Krivovyashchuk"></meta>
+                <meta name="author" content="Eduard Krivovyashchuk | Эдуард Кривовящук"></meta>
                 <meta name="twitter:card" content="summary" ></meta>
                 <meta name="twitter:description" content="Personal website about my skills, education, career, own projects and projects in which I participated"></meta> 
                 <meta name="twitter:title" content="Eduard Krivovyashchuk" ></meta>
