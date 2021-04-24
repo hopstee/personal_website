@@ -35,7 +35,7 @@ export default function Projects() {
                 <link rel="icon" href="/favicon.ico" />
             </Head>
             <div className="wrapper">
-                <div className="inline-flex flex-col md:space-y-0 md:space-x-6 md:flex-row justify-between m-3 md:m-6 lg:w-4/5 xl:w-4/6 2xl:w-1/2 lg:mx-auto">
+                <div className="inline-flex flex-col space-y-3 md:space-y-0 md:space-x-6 md:flex-row justify-between m-3 md:m-6 lg:w-4/5 xl:w-4/6 2xl:w-1/2 lg:mx-auto">
                     {projects.map(el => (
                         <div className="card-wrapper" key={el.title}>
                             <div className="card dark:bg-gray-700 dark:border-gray-600">
