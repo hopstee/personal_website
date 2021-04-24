@@ -2,7 +2,7 @@ const Info = (props) => {
     return (
         <div className="relative w-full sm:w-auto">
             <div className="flex flex-col sm:flex-row items-center p-2">
-                <div className="w-12 h-12 flex items-center justify-center bg-gray-100 dark:bg-gray-800 rounded-xl">
+                <div className="w-12 h-12 flex items-center justify-center bg-gray-100 dark:bg-gray-900 rounded-xl">
                     {props.icon}
                 </div>
                 <div className="flex sm:block flex-col items-center sm:ml-2">

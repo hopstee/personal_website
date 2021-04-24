@@ -11,7 +11,7 @@ const Project = (props) => {
             </p>
             <div className="flex flex-wrap mb-3">
                 {props.stack.map(e => (
-                    <span className="text-xs text-gray-500 dark:text-gray-400 py-1 px-3 mr-1 mb-1 bg-gray-100 dark:bg-gray-600 rounded-full">
+                    <span className="text-xs text-gray-500 dark:text-gray-400 py-1 px-3 mr-1 mb-1 bg-gray-100 dark:bg-gray-700 rounded-full">
                         {e}
                     </span>
                 ))}

@@ -129,9 +129,14 @@
     @apply -translate-y-1/2;
 }
 
-.dark-tooltip, .dark-tooltip:before {
-    @apply bg-gray-700;
-    @apply text-gray-300;
+.dark-tooltip {
+    @apply bg-gray-700 !important;
+    @apply text-gray-300 !important;
+}
+
+.dark-tooltip::before {
+    @apply bg-gray-700 !important;
+    @apply text-gray-300 !important;
 }
 
 .btn-loader .btn-icon {

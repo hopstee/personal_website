@@ -54,14 +54,14 @@ function Home() {
                             {/* <div className="absolute top-0 right-0 flex items-center justify-center w-12 h-12 cursor-pointer text-gray-700 hover:text-gray-900">
                                 <DownloadIcon className="w-6 h-6" onClick={downloadResume} />
                             </div> */}
-                            <div className="card p-4 dark:bg-gray-700 dark:border-gray-600">
+                            <div className="card p-4 dark:bg-gray-800 dark:border-gray-700">
                                 <div className="flex justify-center rounded-2xl">
                                     <Image
                                         src="/img/me.png"
                                         alt="personal photo"
                                         width="150"
                                         height="150"
-                                        className="w-32 h-32 rounded-full mx-auto object-cover bg-gray-100 dark:bg-gray-500"
+                                        className="w-32 h-32 rounded-full mx-auto object-cover bg-gray-100 dark:bg-gray-700"
                                     />
                                 </div>
                                 <div className="text-center pt-6">
@@ -79,8 +79,8 @@ function Home() {
                         </div>
                         {resume.experience.length !== 0 ? (
                             <div className="card-wrapper">
-                                <div className="card dark:bg-gray-700 dark:border-gray-600">
-                                    <div className="card-header dark:border-gray-600 dark:text-gray-100">
+                                <div className="card dark:bg-gray-800 dark:border-gray-700">
+                                    <div className="card-header dark:border-gray-700 dark:text-gray-100">
                                         Experience
                                     </div>
                                     <div className="card-body">
@@ -100,8 +100,8 @@ function Home() {
                         ) : ""}
                         {resume.certificates.length !== 0 ? (
                             <div className="card-wrapper">
-                                <div className="card dark:bg-gray-700 dark:border-gray-600">
-                                    <div className="card-header dark:border-gray-600 dark:text-gray-100">
+                                <div className="card dark:bg-gray-800 dark:border-gray-700">
+                                    <div className="card-header dark:border-gray-700 dark:text-gray-100">
                                         Studies
                                     </div>
                                     <div className="card-body">
@@ -121,8 +121,8 @@ function Home() {
                         ) : ""}
                         {resume.studies.length !== 0 ? (
                             <div className="card-wrapper">
-                                <div className="card dark:bg-gray-700 dark:border-gray-600">
-                                    <div className="card-header dark:border-gray-600 dark:text-gray-100">
+                                <div className="card dark:bg-gray-800 dark:border-gray-700">
+                                    <div className="card-header dark:border-gray-700 dark:text-gray-100">
                                         Studies
                                     </div>
                                     <div className="card-body">
@@ -143,8 +143,8 @@ function Home() {
                     </div>
                     <div className="inline-flex flex-col space-y-3 md:space-y-6 md:w-2/5 md:max-h-full md:ml-3">
                         <div className="card-wrapper">
-                            <div className="card dark:bg-gray-700 dark:border-gray-600">
-                                <div className="card-header dark:border-gray-600 dark:text-gray-100">
+                            <div className="card dark:bg-gray-800 dark:border-gray-700">
+                                <div className="card-header dark:border-gray-700 dark:text-gray-100">
                                     Common
                                 </div>
                                 <div className="card-body">
@@ -171,8 +171,8 @@ function Home() {
                         </div>
                         {resume.links.length !== 0 ? (
                             <div className="card-wrapper">
-                                <div className="card dark:bg-gray-700 dark:border-gray-600">
-                                    <div className="card-header dark:border-gray-600 dark:text-gray-100">
+                                <div className="card dark:bg-gray-800 dark:border-gray-700">
+                                    <div className="card-header dark:border-gray-700 dark:text-gray-100">
                                         Links
                                     </div>
                                     <div className="card-body">
@@ -195,8 +195,8 @@ function Home() {
                             {resume.skills.length !== 0 ? (
                                 <div className="w-full sm:w-1/2 md:w-full sm:mr-1.5 m-0 md:m-0">
                                     <div className="card-wrapper ">
-                                        <div className="card dark:bg-gray-700 dark:border-gray-600">
-                                            <div className="card-header dark:border-gray-600 dark:text-gray-100">
+                                        <div className="card dark:bg-gray-800 dark:border-gray-700">
+                                            <div className="card-header dark:border-gray-700 dark:text-gray-100">
                                                 Skills
                                             </div>
                                             <div className="card-body">
@@ -213,8 +213,8 @@ function Home() {
                             {resume.languages.length !== 0 ? (
                                 <div className="w-full sm:w-1/2 md:w-full sm:ml-1.5 m-0 md:m-0">
                                     <div className="card-wrapper">
-                                        <div className="card dark:bg-gray-700 dark:border-gray-600">
-                                            <div className="card-header dark:border-gray-600 dark:text-gray-100">
+                                        <div className="card dark:bg-gray-800 dark:border-gray-700">
+                                            <div className="card-header dark:border-gray-700 dark:text-gray-100">
                                                 Languages
                                             </div>
                                             <div className="card-body">

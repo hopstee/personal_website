@@ -108,7 +108,7 @@ const Mail = () => {
                 <div className="flex items-center w-full h-full">
                     <div className="w-full p-3 sm:p-6 md:p-0">
                         <div className="relative bg-white md:w-2/3 xl:w-1/3 rounded-xl mx-auto">
-                            <div className="card dark:bg-gray-700 dark:border-gray-600">
+                            <div className="card dark:bg-gray-800 dark:border-gray-700">
                                 <div className="card-body">
                                     <form onSubmit={submitForm} className="p-2">
                                         <h1 className="w-full text-center mt-4 uppercase text-lg font-semibold main-text-color">
@@ -130,7 +130,7 @@ const Mail = () => {
                                             />
                                         </div>
                                         <div className="mt-8 flex justify-end">
-                                            <button type="submit" id="email_submit_btn" className="relative px-4 py-2 w-full md:w-auto bg-gray-200 hover:bg-gray-300 dark:bg-gray-800 dark:hover:bg-gray-900 rounded-lg focus:outline-none text-gray-500 dark:text-gray-300 hover:text-gray-600 dark:hover:text-gray-200 transition-all duration-100">
+                                            <button type="submit" id="email_submit_btn" className="relative px-4 py-2 w-full md:w-auto bg-gray-200 hover:bg-gray-300 dark:bg-gray-900 dark:hover:bg-gray-900 rounded-lg focus:outline-none text-gray-500 dark:text-gray-300 hover:text-gray-600 dark:hover:text-gray-200 transition-all duration-100">
                                                 <span className="hidden btn-icon absolute top-0 left-0 rounded-lg flex items-center justify-center w-full h-full bg-gray-200 hover:bg-gray-300 dark:bg-gray-800 dark:hover:bg-gray-900">
                                                     <SettingsIcon className="w-6 h-6 animate-spin text-gray-500 dark:text-gray-300" />
                                                 </span>
