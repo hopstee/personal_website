@@ -3,15 +3,15 @@ import Link_icon from '../../assets/svg/external_link.svg'
 const Project = (props) => {
     return (
         <div className="flex flex-col p-2">
-            <p className="text-md font-semibold text-gray-900">
+            <p className="text-md font-semibold text-gray-900 dark:text-gray-200">
                 {props.title}
             </p>
-            <p className="text-sm text-gray-500 mb-3">
+            <p className="text-sm text-gray-500 mb-3 dark:text-gray-400">
                 {props.desc}
             </p>
             <div className="flex flex-wrap mb-3">
                 {props.stack.map(e => (
-                    <span className="text-xs text-gray-500 py-1 px-3 mr-1 mb-1 bg-gray-100 rounded-full">
+                    <span className="text-xs text-gray-500 dark:text-gray-400 py-1 px-3 mr-1 mb-1 bg-gray-100 dark:bg-gray-600 rounded-full">
                         {e}
                     </span>
                 ))}

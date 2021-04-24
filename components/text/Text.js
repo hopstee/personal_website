@@ -4,18 +4,18 @@ const Text = (props) => {
         <div className="items-center text-left p-2">
             <div className="flex flex-col md:flex-row justify-between w-full">
                 <div>
-                    <p className="text-md font-semibold text-gray-900">
+                    <p className="text-md font-semibold text-gray-900 dark:text-gray-200">
                         {props.position}
                     </p>
-                    <p className="text-sm text-gray-500">
+                    <p className="text-sm text-gray-500 dark:text-gray-400">
                         {props.institution}, {props.city}
                     </p>
                 </div>
-                <div className="text-sm text-gray-500">
+                <div className="text-sm text-gray-500 dark:text-gray-400">
                     {props.date.from} - {props.date.to}
                 </div>
             </div>
-            <div className="mt-2 text-gray-700">
+            <div className="mt-2 text-gray-700 dark:text-gray-300">
                 {props.desc}
             </div>
         </div>

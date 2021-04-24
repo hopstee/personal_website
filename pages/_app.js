@@ -1,5 +1,6 @@
 import ProgressBar from '@badrap/bar-of-progress'
 import Router from 'next/router'
+import { ThemeProvider } from 'next-themes'
 
 import '../styles/globals.css'
 
@@ -17,9 +18,11 @@ Router.events.on("routeChangeError", progress.finish);
 
 function MyApp({ Component, pageProps }) {
     return (
-        <Layout>
-            <Component {...pageProps} />
-        </Layout>
+        <ThemeProvider attribute="class">
+            <Layout>
+                <Component {...pageProps} />
+            </Layout>
+        </ThemeProvider>
     );
 }
 

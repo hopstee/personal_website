@@ -62,19 +62,27 @@ const Mail = () => {
     
                 btn_text.innerHTML = 'Email sent!'
                 submit_btn.classList.add('success-bg-color')
+                submit_btn.classList.add('dark:bg-green-700')
+                submit_btn.classList.add('dark:hover:bg-green-700')
     
                 setTimeout(function () {
-                    btn_text.innerHTML = 'Send'
                     submit_btn.classList.remove('success-bg-color')
+                    submit_btn.classList.remove('dark:bg-green-700')
+                    submit_btn.classList.remove('dark:hover:bg-green-700')
+                    btn_text.innerHTML = 'Send'
                 }, 2000);
                 
             } else if(!result.success) {
                 btn_text.innerHTML = 'Error'
                 submit_btn.classList.add('error-bg-color')
+                submit_btn.classList.add('dark:bg-red-700')
+                submit_btn.classList.add('dark:hover:bg-red-800')
     
                 setTimeout(function () {
-                    btn_text.innerHTML = 'Send'
                     submit_btn.classList.remove('error-bg-color')
+                    submit_btn.classList.remove('dark:bg-red-700')
+                    submit_btn.classList.remove('dark:hover:bg-red-800')
+                    btn_text.innerHTML = 'Send'
                 }, 2000);
             }
         }
@@ -100,7 +108,7 @@ const Mail = () => {
                 <div className="flex items-center w-full h-full">
                     <div className="w-full p-3 sm:p-6 md:p-0">
                         <div className="relative bg-white md:w-2/3 xl:w-1/3 rounded-xl mx-auto">
-                            <div className="card">
+                            <div className="card dark:bg-gray-700 dark:border-gray-600">
                                 <div className="card-body">
                                     <form onSubmit={submitForm} className="p-2">
                                         <h1 className="w-full text-center mt-4 uppercase text-lg font-semibold main-text-color">
@@ -122,9 +130,9 @@ const Mail = () => {
                                             />
                                         </div>
                                         <div className="mt-8 flex justify-end">
-                                            <button type="submit" id="email_submit_btn" className="relative px-4 py-2 w-full md:w-auto main-btn-color rounded-lg focus:outline-none text-white transition-all duration-100">
-                                                <span className="hidden btn-icon absolute top-0 left-0 rounded-lg flex items-center justify-center w-full h-full main-btn-color">
-                                                    <SettingsIcon className="w-6 h-6 animate-spin" />
+                                            <button type="submit" id="email_submit_btn" className="relative px-4 py-2 w-full md:w-auto bg-gray-200 hover:bg-gray-300 dark:bg-gray-800 dark:hover:bg-gray-900 rounded-lg focus:outline-none text-gray-500 dark:text-gray-300 hover:text-gray-600 dark:hover:text-gray-200 transition-all duration-100">
+                                                <span className="hidden btn-icon absolute top-0 left-0 rounded-lg flex items-center justify-center w-full h-full bg-gray-200 hover:bg-gray-300 dark:bg-gray-800 dark:hover:bg-gray-900">
+                                                    <SettingsIcon className="w-6 h-6 animate-spin text-gray-500 dark:text-gray-300" />
                                                 </span>
                                                 <span className="btn-text">
                                                     Send

@@ -1,10 +1,10 @@
 function Input(props) {
     let type;
     if(props.textarea) {
-        type = <textarea className="w-full py-2 px-4 mt-2 border rounded-md main-border-color transition-all duration-100 input" 
+        type = <textarea className="w-full py-2 px-4 mt-2 border rounded-md main-border-color dark:border-gray-600 dark:bg-gray-700 transition-all duration-100 input" 
             onChange={props.onchange} name={props.title.toLowerCase()} placeholder={props.placeholder}></textarea>
     } else {
-        type = <input className="w-full py-2 px-4 mt-2 border rounded-md main-border-color transition-all duration-100 input" 
+        type = <input className="w-full py-2 px-4 mt-2 border rounded-md main-border-color dark:border-gray-600 dark:bg-gray-700 transition-all duration-100 input" 
             onChange={props.onchange} name={props.title.toLowerCase()} placeholder={props.placeholder} autoComplete="off"/>;
     }
 

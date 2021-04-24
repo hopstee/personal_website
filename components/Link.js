@@ -7,7 +7,7 @@ export default ({ href, children }) => {
 
     let className = children.props.className || ''
     if (router.pathname === href) {
-        className = `${className} bg-gray-600`
+        className = `${className} bg-gray-100 dark:bg-gray-600`
     }
 
     return <Link href={href}>{React.cloneElement(children, { className })}</Link>
