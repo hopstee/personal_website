@@ -87,6 +87,23 @@
     @apply p-2;
 }
 
+.settings-item {
+    @apply w-full;
+    @apply h-14;
+    @apply flex;
+    @apply items-center;
+    @apply justify-center;
+    @apply text-gray-100;
+    @apply cursor-pointer;
+    @apply rounded-xl;
+    @apply transition-all;
+    @apply duration-100;
+}
+
+.settings-item:hover {
+    @apply bg-gray-100;
+}
+
 .nav-link, .nav-link div {
     @apply relative;
     @apply w-12;
@@ -135,16 +152,6 @@
     @apply transform;
     @apply rotate-45;
     @apply -translate-y-1/2;
-}
-
-.dark-tooltip {
-    @apply bg-gray-700 !important;
-    @apply text-gray-300 !important;
-}
-
-.dark-tooltip::before {
-    @apply bg-gray-700 !important;
-    @apply text-gray-300 !important;
 }
 
 .btn-loader .btn-icon {

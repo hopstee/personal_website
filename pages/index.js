@@ -10,6 +10,8 @@ import TimeIcon from '../assets/svg/time.svg';
 import External_link from '../assets/svg/external_link.svg';
 import DownloadIcon from '../assets/svg/download.svg';
 
+import useTranslation from "../lib/language/useTranslation"
+
 // import { server } from '../config/index'
 // import resume from '../data/personal_data.json'
 
@@ -26,6 +28,7 @@ import DownloadIcon from '../assets/svg/download.svg';
 
 function Home() {
     const resume = require('../data/personal_data.json')
+    const { t } = useTranslation()
     
     const date = new Date().getTime() - new Date(resume.personal.start_work).getTime();
     const till_today = new Date(date);
@@ -81,7 +84,7 @@ function Home() {
                             <div className="card-wrapper">
                                 <div className="card dark:bg-gray-800 dark:border-gray-700">
                                     <div className="card-header dark:border-gray-700 dark:text-gray-100">
-                                        Experience
+                                        {t("experience")}
                                     </div>
                                     <div className="card-body">
                                         {resume.experience.map(item => (
@@ -102,10 +105,10 @@ function Home() {
                             <div className="card-wrapper">
                                 <div className="card dark:bg-gray-800 dark:border-gray-700">
                                     <div className="card-header dark:border-gray-700 dark:text-gray-100">
-                                        Studies
+                                        {t("certificates")}
                                     </div>
                                     <div className="card-body">
-                                        {resume.studies.map(item => (
+                                        {resume.certificates.map(item => (
                                             <Text 
                                                 key={item.id}
                                                 position={item.grade}
@@ -123,7 +126,7 @@ function Home() {
                             <div className="card-wrapper">
                                 <div className="card dark:bg-gray-800 dark:border-gray-700">
                                     <div className="card-header dark:border-gray-700 dark:text-gray-100">
-                                        Studies
+                                        {t("studies")}
                                     </div>
                                     <div className="card-body">
                                         {resume.studies.map(item => (
@@ -145,7 +148,7 @@ function Home() {
                         <div className="card-wrapper">
                             <div className="card dark:bg-gray-800 dark:border-gray-700">
                                 <div className="card-header dark:border-gray-700 dark:text-gray-100">
-                                    Common
+                                    {t("common")}
                                 </div>
                                 <div className="card-body">
                                     <div className="flex flex-wrap">
@@ -173,7 +176,7 @@ function Home() {
                             <div className="card-wrapper">
                                 <div className="card dark:bg-gray-800 dark:border-gray-700">
                                     <div className="card-header dark:border-gray-700 dark:text-gray-100">
-                                        Links
+                                        {t("links")}
                                     </div>
                                     <div className="card-body">
                                         <div className="flex flex-wrap">
@@ -197,7 +200,7 @@ function Home() {
                                     <div className="card-wrapper ">
                                         <div className="card dark:bg-gray-800 dark:border-gray-700">
                                             <div className="card-header dark:border-gray-700 dark:text-gray-100">
-                                                Skills
+                                                {t("skills")}
                                             </div>
                                             <div className="card-body">
                                                 <div className="flex flex-wrap ">
@@ -215,7 +218,7 @@ function Home() {
                                     <div className="card-wrapper">
                                         <div className="card dark:bg-gray-800 dark:border-gray-700">
                                             <div className="card-header dark:border-gray-700 dark:text-gray-100">
-                                                Languages
+                                                {t("languages")}
                                             </div>
                                             <div className="card-body">
                                                 <div className="flex flex-wrap ">
