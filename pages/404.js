@@ -16,13 +16,13 @@ const NotFound = () => {
                 <Image
                     src="/img/404.png"
                     alt="Page Not Found"
-                    width={400}
-                    height={400}
+                    width={300}
+                    height={300}
                 />
                 <div className="text-9xl font-extrabold main-text-color pt-8">
                     404
                 </div>
-                <div className="text-xl text-gray-700">
+                <div className="text-xl text-gray-700 dark:text-gray-400">
                     Do you see page? I too...
                 </div>
             </div >

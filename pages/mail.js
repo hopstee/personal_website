@@ -62,13 +62,13 @@ const Mail = () => {
     
                 btn_text.innerHTML = 'Email sent!'
                 submit_btn.classList.add('success-bg-color')
-                submit_btn.classList.add('dark:bg-green-700')
-                submit_btn.classList.add('dark:hover:bg-green-700')
+                // submit_btn.classList.add('dark:bg-green-700')
+                // submit_btn.classList.add('dark:hover:bg-green-700')
     
                 setTimeout(function () {
                     submit_btn.classList.remove('success-bg-color')
-                    submit_btn.classList.remove('dark:bg-green-700')
-                    submit_btn.classList.remove('dark:hover:bg-green-700')
+                    // submit_btn.classList.remove('dark:bg-green-700')
+                    // submit_btn.classList.remove('dark:hover:bg-green-700')
                     btn_text.innerHTML = 'Send'
                 }, 2000);
                 
@@ -130,9 +130,9 @@ const Mail = () => {
                                             />
                                         </div>
                                         <div className="mt-8 flex justify-end">
-                                            <button type="submit" id="email_submit_btn" className="relative px-4 py-2 w-full md:w-auto bg-gray-200 hover:bg-gray-300 dark:bg-gray-900 dark:hover:bg-gray-900 rounded-lg focus:outline-none text-gray-500 dark:text-gray-300 hover:text-gray-600 dark:hover:text-gray-200 transition-all duration-100">
-                                                <span className="hidden btn-icon absolute top-0 left-0 rounded-lg flex items-center justify-center w-full h-full bg-gray-200 hover:bg-gray-300 dark:bg-gray-800 dark:hover:bg-gray-900">
-                                                    <SettingsIcon className="w-6 h-6 animate-spin text-gray-500 dark:text-gray-300" />
+                                            <button type="submit" id="email_submit_btn" className="relative px-4 py-2 w-full md:w-auto bg-blue-500 hover:bg-blue-600 rounded-lg focus:outline-none text-gray-100 transition-all duration-100">
+                                                <span className="hidden btn-icon absolute top-0 left-0 rounded-lg flex items-center justify-center w-full h-full bg-blue-500 hover:bg-blue-600">
+                                                    <SettingsIcon className="w-6 h-6 animate-spin text-gray-100" />
                                                 </span>
                                                 <span className="btn-text">
                                                     Send
