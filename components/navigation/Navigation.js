@@ -11,11 +11,13 @@ import MailIcon from '../../assets/svg/mail.svg';
 import SunIcon from '../../assets/svg/sun.svg';
 import MoonIcon from '../../assets/svg/moon.svg';
 import SettingsIcon from '../../assets/svg/settings.svg';
-import GlobeIcon from '../../assets/svg/globe.svg'
-import DownloadIcon from '../../assets/svg/download.svg'
+import GlobeIcon from '../../assets/svg/globe.svg';
+import DownloadIcon from '../../assets/svg/download.svg';
+import CheckIcon from '../../assets/svg/check.svg';
 
 import { LanguageContext, locales } from '../../lib/language/LanguageProvider'
 import useTranslation from "../../lib/language/useTranslation"
+import { set } from 'react-hook-form';
 
 function Navigation(props) {
 
@@ -23,6 +25,7 @@ function Navigation(props) {
 
     const [locale, setLocale] = useContext(LanguageContext);
     const { theme, setTheme } = useTheme();
+    console.log(theme)
     const [isMounted, setIsMounted] = useState(false);
     const [isOpen, setIsOpen] = useState(false);
 
@@ -56,7 +59,10 @@ function Navigation(props) {
 
     useEffect(() => {
         setIsMounted(true);
-        // setIsOpen(true);
+
+        if(theme !== "light" && theme !== "dark") {
+            setTheme("light");
+        }
     }, []);
 
     return (
@@ -92,7 +98,10 @@ function Navigation(props) {
 
                             <div className="absolute top-0 left-0 left-full inline-block space-y-2 w-full h-full bg-white dark:bg-gray-800 cursor-default overflow-auto transition-all duration-150" id="langs"  onClick={showLangs}>
                                 {locales.map(el => (
-                                    <div className={`settings-item dark:hover:bg-gray-700 text-gray-900 dark:text-gray-100 ` + (el.abr === locale ? "bg-gray-100 dark:bg-gray-700" : "")} key={el.abr} onClick={() => switchLang(el.abr)}>
+                                    <div className="settings-item dark:hover:bg-gray-700 text-gray-900 dark:text-gray-100" key={el.abr} onClick={() => switchLang(el.abr)}>
+                                        {el.abr === locale ? (
+                                            <CheckIcon className="w-6 h-6 mr-2" />
+                                        ) : ""}
                                         {el.name}
                                     </div>
                                 ))}
