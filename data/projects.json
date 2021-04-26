@@ -1,66 +1,134 @@
 [
     {
-        "title": "Personal projects",
-        "projects": [
-            {
-                "title": "Personal web site",
-                "desc": "Personal resume site",
-                "stack": [
-                    "JavaScript",
-                    "JSON",
-                    "NextJS",
-                    "ExpressJS",
-                    "Tailwind"
-                ],
-                "link": "https://edkr.site/",
-                "code": "https://github.com/hopstee/personal_website"
-            }
-        ]
+        "en": {
+            "title": "Personal projects",
+            "projects": [
+                {
+                    "title": "Personal web site",
+                    "desc": "Personal resume site",
+                    "stack": [
+                        "JavaScript",
+                        "JSON",
+                        "NextJS",
+                        "ExpressJS",
+                        "Tailwind"
+                    ],
+                    "link": "https://edkr.site/",
+                    "code": "https://github.com/hopstee/personal_website"
+                }
+            ]
+        },
+        "ru": {
+            "title": "Личные проекты",
+            "projects": [
+                {
+                    "title": "Личный веб сайт",
+                    "desc": "Личный сайт-резюме",
+                    "stack": [
+                        "JavaScript",
+                        "JSON",
+                        "NextJS",
+                        "ExpressJS",
+                        "Tailwind"
+                    ],
+                    "link": "https://edkr.site/",
+                    "code": "https://github.com/hopstee/personal_website"
+                }
+            ]
+        }
     },
     {
-        "title": "Other projects",
-        "projects": [    
-            {
-                "title": "Mercado Gratis",
-                "desc": "Bulletin board",
-                "stack": [
-                    "PHP",
-                    "Laravel",
-                    "MySQL",
-                    "JavaScript",
-                    "Bootstrap"
-                ],
-                "link": "https://mercado.gratis/",
-                "code": ""
-            },
-            {
-                "title": "Sportiks",
-                "desc": "Sports audio and video content streaming service",
-                "stack": [
-                    "PHP",
-                    "Codeigniter",
-                    "MySQL",
-                    "JavaScript",
-                    "Bootstrap"
-                ],
-                "link": "https://www.sportiks.me/",
-                "code": ""
-            },
-            {
-                "title": "EVPoint",
-                "desc": "Electric car charging software",
-                "stack": [
-                    "PHP",
-                    "Codeigniter",
-                    "MySQL",
-                    "JavaScript",
-                    "JQuery",
-                    "WebSocket",
-                    "Bootstrap"
-                ],
-                "link": "https://evpoint.md/",
-                "code": ""
-            }
-        ]
+        "en": {
+            "title": "Other projects",
+            "projects": [    
+                {
+                    "title": "Mercado Gratis",
+                    "desc": "Bulletin board",
+                    "stack": [
+                        "PHP",
+                        "Laravel",
+                        "MySQL",
+                        "JavaScript",
+                        "Bootstrap"
+                    ],
+                    "link": "https://mercado.gratis/",
+                    "code": ""
+                },
+                {
+                    "title": "Sportiks",
+                    "desc": "Sports audio and video content streaming service",
+                    "stack": [
+                        "PHP",
+                        "Codeigniter",
+                        "MySQL",
+                        "JavaScript",
+                        "Bootstrap"
+                    ],
+                    "link": "https://www.sportiks.me/",
+                    "code": ""
+                },
+                {
+                    "title": "EVPoint",
+                    "desc": "Electric car charging software",
+                    "stack": [
+                        "PHP",
+                        "Codeigniter",
+                        "MySQL",
+                        "JavaScript",
+                        "JQuery",
+                        "WebSocket",
+                        "Bootstrap"
+                    ],
+                    "link": "https://cabinet.evpoint.md/",
+                    "code": ""
+                }
+            ]
+        },
+        "ru": {
+            "title": "Другие проекты",
+            "projects": [    
+                {
+                    "title": "Mercado Gratis",
+                    "desc": "Доска объявлений",
+                    "stack": [
+                        "PHP",
+                        "Laravel",
+                        "MySQL",
+                        "JavaScript",
+                        "Bootstrap"
+                    ],
+                    "link": "https://mercado.gratis/",
+                    "code": ""
+                },
+                {
+                    "title": "Sportiks",
+                    "desc": "Стриминговая платформа аудио и видео контента",
+                    "stack": [
+                        "PHP",
+                        "Codeigniter",
+                        "MySQL",
+                        "JavaScript",
+                        "Bootstrap"
+                    ],
+                    "link": "https://www.sportiks.me/",
+                    "code": ""
+                },
+                {
+                    "title": "EVPoint",
+                    "desc": "Програмное обеспечение для зардяных станций",
+                    "stack": [
+                        "PHP",
+                        "Codeigniter",
+                        "MySQL",
+                        "JavaScript",
+                        "JQuery",
+                        "WebSocket",
+                        "Bootstrap"
+                    ],
+                    "link": "https://cabinet.evpoint.md/",
+                    "code": ""
+                }
+            ]
+        }
     }
 ]

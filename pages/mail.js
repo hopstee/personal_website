@@ -7,6 +7,8 @@ import messageValidator from '../utils/validators/messageValidator'
 
 import SettingsIcon from '../assets/svg/settings.svg';
 
+import useTranslation from "../lib/language/useTranslation"
+
 const updateValidationMessages = (toValidate) => {
 
     let el = document.getElementById(toValidate.field)
@@ -22,6 +24,8 @@ const updateValidationMessages = (toValidate) => {
 }
 
 const Mail = () => {
+    const { t } = useTranslation()
+
     const submitForm = async (e) => { 
         e.preventDefault()
 
@@ -60,7 +64,7 @@ const Mail = () => {
             if(result.success) {
                 e.target.reset()
     
-                btn_text.innerHTML = 'Email sent!'
+                btn_text.innerHTML = t("emailSent")
                 submit_btn.classList.add('success-bg-color')
                 // submit_btn.classList.add('dark:bg-green-700')
                 // submit_btn.classList.add('dark:hover:bg-green-700')
@@ -69,11 +73,11 @@ const Mail = () => {
                     submit_btn.classList.remove('success-bg-color')
                     // submit_btn.classList.remove('dark:bg-green-700')
                     // submit_btn.classList.remove('dark:hover:bg-green-700')
-                    btn_text.innerHTML = 'Send'
+                    btn_text.innerHTML = t("send")
                 }, 2000);
                 
             } else if(!result.success) {
-                btn_text.innerHTML = 'Error'
+                btn_text.innerHTML = t("error")
                 submit_btn.classList.add('error-bg-color')
                 submit_btn.classList.add('dark:bg-red-700')
                 submit_btn.classList.add('dark:hover:bg-red-800')
@@ -82,7 +86,7 @@ const Mail = () => {
                     submit_btn.classList.remove('error-bg-color')
                     submit_btn.classList.remove('dark:bg-red-700')
                     submit_btn.classList.remove('dark:hover:bg-red-800')
-                    btn_text.innerHTML = 'Send'
+                    btn_text.innerHTML = t("send")
                 }, 2000);
             }
         }
@@ -106,26 +110,26 @@ const Mail = () => {
             </Head>
             <div className="w-full h-full md:h-screen">
                 <div className="flex items-center w-full h-full">
-                    <div className="w-full p-3 sm:p-6 md:p-0">
+                    <div className="w-full p-3 lg:p-6 md:p-0">
                         <div className="relative bg-white md:w-2/3 xl:w-1/3 rounded-xl mx-auto">
                             <div className="card dark:bg-gray-800 dark:border-gray-700">
                                 <div className="card-body">
                                     <form onSubmit={submitForm} className="p-2">
                                         <h1 className="w-full text-center mt-4 uppercase text-lg font-semibold main-text-color">
-                                            Email me
+                                            {t("emailMe")}
                                         </h1>
                                         <div>
                                             <Input 
-                                                title="Name" 
-                                                placeholder="Ivan Ivanov"
+                                                title={t("name")}
+                                                placeholder={t("namePlaceholder")}
                                             />
                                             <Input 
-                                                title="Email" 
-                                                placeholder="your@email.com"
+                                                title={t("email")}
+                                                placeholder={t("emailPlaceholder")}
                                             />
                                             <Input 
-                                                title="Message" 
-                                                placeholder="I would like..."
+                                                title={t("message")} 
+                                                placeholder={t("messagePlaceholder")}
                                                 textarea={true} 
                                             />
                                         </div>
@@ -135,7 +139,7 @@ const Mail = () => {
                                                     <SettingsIcon className="w-6 h-6 animate-spin text-gray-100" />
                                                 </span>
                                                 <span className="btn-text">
-                                                    Send
+                                                    {t("send")}
                                                 </span>
                                             </button>
                                         </div>

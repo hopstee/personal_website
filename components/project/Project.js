@@ -1,6 +1,10 @@
 import Link_icon from '../../assets/svg/external_link.svg'
 
+import useTranslation from "../../lib/language/useTranslation"
+
 const Project = (props) => {
+    const { t } = useTranslation()
+
     return (
         <div className="flex flex-col p-2">
             <p className="text-md font-semibold text-gray-900 dark:text-gray-200">
@@ -17,13 +21,13 @@ const Project = (props) => {
                 ))}
             </div>
 
-            <div className="inline-flex space-x-3">
+            <div className="inline-flex space-x-1">
                 {props.link !== '' ? (
                     <a href={props.link} target="blank" className="flex items-center text-sm text-blue-500 mr-4">
                         <Link_icon 
                             className="w-4 h-4 mr-1"
                         />
-                        Visit site 
+                        {t("visitSite")}
                     </a>
                 ) : ""}
                 
@@ -32,7 +36,7 @@ const Project = (props) => {
                         <Link_icon 
                             className="w-4 h-4 mr-1"
                         />
-                        View code
+                        {t("viewCode")}
                     </a>
                 ) : ""}
             </div>

@@ -19,6 +19,8 @@ import useTranslation from "../../lib/language/useTranslation"
 
 function Navigation(props) {
 
+    const { t } = useTranslation()
+
     const [locale, setLocale] = useContext(LanguageContext);
     const { theme, setTheme } = useTheme();
     const [isMounted, setIsMounted] = useState(false);
@@ -61,7 +63,7 @@ function Navigation(props) {
         <>
             {isOpen ? (
                 <Modal
-                    header="Settings"
+                    header={t("settings")}
                     body={
                         <div className="relative overflow-x-hidden">
                             <div className="inline-block space-y-2 w-full h-48 transition-all duration-150" id="settings_block">
@@ -69,18 +71,18 @@ function Navigation(props) {
                                     {theme === "light" ? (
                                         <div className="settings-item dark:hover:bg-gray-700 text-gray-900 dark:text-gray-100">
                                             <MoonIcon className="h-8 w-8 mr-4" />
-                                            <span>Dark mode</span>
+                                            <span>{t("darkMode")}</span>
                                         </div>
                                     ) : (
                                         <div className="settings-item dark:hover:bg-gray-700 text-gray-900 dark:text-gray-100">
                                             <SunIcon className="h-8 w-8 mr-4" />
-                                            <span>Light mode</span>
+                                            <span>{t("lightMode")}</span>
                                         </div>
                                     )}
                                 </div>
                                 <div className="settings-item dark:hover:bg-gray-700 text-gray-900 dark:text-gray-100" onClick={showLangs}>
                                     <GlobeIcon className="h-8 w-8 mr-4" />
-                                    <span>Language</span>
+                                    <span>{t("languages")}</span>
                                 </div>
                                 {/* <div className="settings-item dark:hover:bg-gray-700 text-gray-900 dark:text-gray-100">
                                     <DownloadIcon className="h-8 w-8 mr-4" />
@@ -90,7 +92,7 @@ function Navigation(props) {
 
                             <div className="absolute top-0 left-0 left-full inline-block space-y-2 w-full h-full bg-white dark:bg-gray-800 cursor-default overflow-auto transition-all duration-150" id="langs"  onClick={showLangs}>
                                 {locales.map(el => (
-                                    <div className={`settings-item dark:hover:bg-gray-700 text-gray-900 dark:text-gray-100 ` + (el.abr === locale ? "bg-gray-100 dark:bg-gray-700" : "")} key={el.abr} onClick={switchLang(el.abr)}>
+                                    <div className={`settings-item dark:hover:bg-gray-700 text-gray-900 dark:text-gray-100 ` + (el.abr === locale ? "bg-gray-100 dark:bg-gray-700" : "")} key={el.abr} onClick={() => switchLang(el.abr)}>
                                         {el.name}
                                     </div>
                                 ))}
@@ -106,24 +108,24 @@ function Navigation(props) {
                         <Link href="/">
                             <a className="nav-link dark:hover:bg-gray-700">
                                 <DocumentIcon className="h-8 w-8 text-gray-700 dark:text-gray-100" />
-                                <span className="tooltip dark:dark-tooltip">Resume</span>
+                                <span className="tooltip dark:dark-tooltip">{t("resume")}</span>
                             </a>
                         </Link>
                         <Link href="/projects">
                             <a className="nav-link dark:hover:bg-gray-700">
                                 <ProjectsIcon className="h-8 w-8 text-gray-700 dark:text-gray-100" />
-                                <span className="tooltip dark:dark-tooltip">Projects</span>
+                                <span className="tooltip dark:dark-tooltip">{t("projects")}</span>
                             </a>
                         </Link>
                         <Link href="/mail">
                             <a className="nav-link dark:hover:bg-gray-700">
                                 <MailIcon className="h-8 w-8 text-gray-900 dark:text-gray-100" />
-                                <span className="tooltip dark:dark-tooltip">Send email</span>
+                                <span className="tooltip dark:dark-tooltip">{t("sendEmail")}</span>
                             </a>
                         </Link>
                         <a className="nav-link dark:hover:bg-gray-700" onClick={handleModal}>
                             <SettingsIcon className="h-8 w-8 text-gray-900 dark:text-gray-100" />
-                            <span className="tooltip dark:dark-tooltip">Settings</span>
+                            <span className="tooltip dark:dark-tooltip">{t("settings")}</span>
                         </a>
                     </div>
                 </div>

@@ -27,14 +27,17 @@ import useTranslation from "../lib/language/useTranslation"
 // }
 
 function Home() {
-    const resume = require('../data/personal_data.json')
-    const { t } = useTranslation()
+    const { t, locale } = useTranslation()
+
+    const resume = require('../data/personal_data.json')[locale]
     
     const date = new Date().getTime() - new Date(resume.personal.start_work).getTime();
     const till_today = new Date(date);
     const years = till_today.getFullYear() - 1970;
     const months = till_today.getMonth();
 
+    const experience_string = years + " " + t("years") + (months > 0 ? ", " + months + " " + t("months") : "")
+    
     return (
         <>
             <Head>
@@ -157,15 +160,15 @@ function Home() {
                                                 key="common-0"
                                                 icon={<EmailIcon className="w-6 h-6 main-text-color" />} 
                                                 value={resume.personal.email} 
-                                                name="Email"
+                                                name={t("email")}
                                             />
                                         ) : ""}
                                         {resume.personal.email !== "" ? (
                                             <Info 
                                                 key="common-1" 
                                                 icon={<TimeIcon className="w-6 h-6 main-text-color" />} 
-                                                value={`${years} years, ${months} months`} 
-                                                name="Experience" 
+                                                value={experience_string} 
+                                                name={t("experience")} 
                                             />
                                         ) : ""}
                                     </div>

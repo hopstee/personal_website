@@ -2,6 +2,8 @@ import Head from 'next/head'
 
 import Project from '../components/project/Project'
 
+import useTranslation from "../lib/language/useTranslation"
+
 // import { server } from '../config/index'
 
 // export async function getServerSideProps() {
@@ -17,6 +19,8 @@ import Project from '../components/project/Project'
 // }
 
 export default function Projects() {
+    const { locale } = useTranslation()
+
     const projects = require('../data/projects.json')
     
     return (
@@ -37,13 +41,13 @@ export default function Projects() {
             <div className="wrapper">
                 <div className="inline-flex flex-col space-y-3 md:space-y-0 md:space-x-6 md:flex-row justify-between m-3 md:m-6 lg:w-4/5 xl:w-4/6 2xl:w-1/2 lg:mx-auto">
                     {projects.map(el => (
-                        <div className="card-wrapper" key={el.title}>
+                        <div className="card-wrapper" key={el[locale].title}>
                             <div className="card dark:bg-gray-800 dark:border-gray-700">
                                 <div className="card-header dark:border-gray-700 dark:text-gray-100">
-                                    {el.title}
+                                    {el[locale].title}
                                 </div>
                                 <div className="card-body inline-flex flex-col space-y-3">
-                                    {el.projects.map(pr => (
+                                    {el[locale].projects.map(pr => (
                                         <Project key={pr.title} {...pr} />
                                     ))}
                                 </div>
