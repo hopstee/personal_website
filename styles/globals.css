@@ -2,6 +2,18 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+    font-family: 'RobotoMono';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: local('RobotoMono'), url(../public/fonts/static/RobotoMono-Regular.ttf) format('woff2');
+}
+
+body {
+    font-family: 'RobotoMono'
+}
+
 .wrapper {
     @apply min-h-full;
     @apply flex;
