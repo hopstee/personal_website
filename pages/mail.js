@@ -118,7 +118,7 @@ const Mail = () => {
                                         <h1 className="w-full text-center mt-4 uppercase text-lg font-semibold main-text-color tracking-wider">
                                             {t("emailMe")}
                                         </h1>
-                                        <div className="thin-font">
+                                        <div>
                                             <Input 
                                                 title={t("name")}
                                                 placeholder={t("namePlaceholder")}

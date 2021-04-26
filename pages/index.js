@@ -89,7 +89,7 @@ function Home() {
                                     <div className="card-header dark:border-gray-700 dark:text-gray-100">
                                         {t("experience")}
                                     </div>
-                                    <div className="card-body inline-flex flex-col space-y-3 thin-font">
+                                    <div className="card-body inline-flex flex-col space-y-3 ">
                                         {resume.experience.map(item => (
                                             <Text  
                                                 key={item.id}
@@ -110,7 +110,7 @@ function Home() {
                                     <div className="card-header dark:border-gray-700 dark:text-gray-100">
                                         {t("certificates")}
                                     </div>
-                                    <div className="card-body thin-font">
+                                    <div className="card-body ">
                                         {resume.certificates.map(item => (
                                             <Text 
                                                 key={item.id}
@@ -131,7 +131,7 @@ function Home() {
                                     <div className="card-header dark:border-gray-700 dark:text-gray-100">
                                         {t("studies")}
                                     </div>
-                                    <div className="card-body thin-font">
+                                    <div className="card-body ">
                                         {resume.studies.map(item => (
                                             <Text 
                                                 key={item.id}
@@ -153,7 +153,7 @@ function Home() {
                                 <div className="card-header dark:border-gray-700 dark:text-gray-100">
                                     {t("common")}
                                 </div>
-                                <div className="card-body thin-font">
+                                <div className="card-body ">
                                     <div className="flex flex-wrap">
                                         {resume.personal.email !== "" ? (
                                             <Info 
@@ -181,7 +181,7 @@ function Home() {
                                     <div className="card-header dark:border-gray-700 dark:text-gray-100">
                                         {t("links")}
                                     </div>
-                                    <div className="card-body thin-font">
+                                    <div className="card-body ">
                                         <div className="flex flex-wrap">
                                             {resume.links.map(item => (
                                                 <a href={item.link} target="blank" className="relative w-full sm:w-auto">
@@ -205,7 +205,7 @@ function Home() {
                                             <div className="card-header dark:border-gray-700 dark:text-gray-100">
                                                 {t("skills")}
                                             </div>
-                                            <div className="card-body thin-font">
+                                            <div className="card-body ">
                                                 <div className="flex flex-wrap ">
                                                     {resume.skills.map(item => (
                                                         <Level key={item.id} title={item.title} level={item.level} />
@@ -223,7 +223,7 @@ function Home() {
                                             <div className="card-header dark:border-gray-700 dark:text-gray-100">
                                                 {t("languages")}
                                             </div>
-                                            <div className="card-body thin-font">
+                                            <div className="card-body ">
                                                 <div className="flex flex-wrap ">
                                                     {resume.languages.map(item => (
                                                         <Level key={item.id} title={item.title} level={item.level} />
