@@ -7,11 +7,22 @@
     font-style: normal;
     font-weight: 400;
     font-display: swap;
-    src: local('RobotoMono'), url(../public/fonts/static/RobotoMono-Regular.ttf) format('woff2');
+    src: local('RobotoMono'), url(../public/fonts/static/RobotoMono-Medium.ttf) format('woff2');
+}
+@font-face {
+    font-family: 'RobotoMono-Light';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: local('RobotoMono-Light'), url(../public/fonts/static/RobotoMono-Light.ttf) format('woff2');
 }
 
 body {
     font-family: 'RobotoMono'
+}
+
+.thin-font {
+    font-family: 'RobotoMono-Light'
 }
 
 .wrapper {
@@ -88,8 +99,9 @@ body {
 }
 
 .card-header {
-    @apply text-gray-900;
+    @apply text-gray-800;
     @apply font-semibold;
+    @apply tracking-wider;
     @apply p-4;
     @apply border-b;
     @apply border-gray-200;

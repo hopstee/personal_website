@@ -46,7 +46,7 @@ export default function Projects() {
                                 <div className="card-header dark:border-gray-700 dark:text-gray-100">
                                     {el[locale].title}
                                 </div>
-                                <div className="card-body inline-flex flex-col space-y-3">
+                                <div className="card-body inline-flex flex-col space-y-3 thin-font">
                                     {el[locale].projects.map(pr => (
                                         <Project key={pr.title} {...pr} />
                                     ))}

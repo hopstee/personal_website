@@ -71,10 +71,10 @@ function Home() {
                                     />
                                 </div>
                                 <div className="text-center pt-6">
-                                    <h1 className="uppercase text-lg font-semibold main-text-color">
+                                    <h1 className="uppercase text-lg font-semibold main-text-color tracking-widest">
                                         {resume.personal.name}
                                     </h1>
-                                    <p className="text-lg font-semibold text-gray-700 dark:text-gray-100">
+                                    <p className="text-lg font-semibold text-gray-700 dark:text-gray-100 tracking-wider">
                                         {resume.personal.bio}
                                     </p>
                                     <p className="mt-2 text-gray-500 dark:text-gray-400">
@@ -89,7 +89,7 @@ function Home() {
                                     <div className="card-header dark:border-gray-700 dark:text-gray-100">
                                         {t("experience")}
                                     </div>
-                                    <div className="card-body">
+                                    <div className="card-body inline-flex flex-col space-y-3 thin-font">
                                         {resume.experience.map(item => (
                                             <Text  
                                                 key={item.id}
@@ -110,7 +110,7 @@ function Home() {
                                     <div className="card-header dark:border-gray-700 dark:text-gray-100">
                                         {t("certificates")}
                                     </div>
-                                    <div className="card-body">
+                                    <div className="card-body thin-font">
                                         {resume.certificates.map(item => (
                                             <Text 
                                                 key={item.id}
@@ -131,7 +131,7 @@ function Home() {
                                     <div className="card-header dark:border-gray-700 dark:text-gray-100">
                                         {t("studies")}
                                     </div>
-                                    <div className="card-body">
+                                    <div className="card-body thin-font">
                                         {resume.studies.map(item => (
                                             <Text 
                                                 key={item.id}
@@ -153,7 +153,7 @@ function Home() {
                                 <div className="card-header dark:border-gray-700 dark:text-gray-100">
                                     {t("common")}
                                 </div>
-                                <div className="card-body">
+                                <div className="card-body thin-font">
                                     <div className="flex flex-wrap">
                                         {resume.personal.email !== "" ? (
                                             <Info 
@@ -181,7 +181,7 @@ function Home() {
                                     <div className="card-header dark:border-gray-700 dark:text-gray-100">
                                         {t("links")}
                                     </div>
-                                    <div className="card-body">
+                                    <div className="card-body thin-font">
                                         <div className="flex flex-wrap">
                                             {resume.links.map(item => (
                                                 <a href={item.link} target="blank" className="relative w-full sm:w-auto">
@@ -200,12 +200,12 @@ function Home() {
                         <div className="inline-flex flex-col space-y-3 md:space-y-6 sm:space-y-0 sm:flex-row md:flex-col">
                             {resume.skills.length !== 0 ? (
                                 <div className="w-full sm:w-1/2 md:w-full sm:mr-1.5 m-0 md:m-0">
-                                    <div className="card-wrapper ">
+                                    <div className="card-wrapper">
                                         <div className="card dark:bg-gray-800 dark:border-gray-700">
                                             <div className="card-header dark:border-gray-700 dark:text-gray-100">
                                                 {t("skills")}
                                             </div>
-                                            <div className="card-body">
+                                            <div className="card-body thin-font">
                                                 <div className="flex flex-wrap ">
                                                     {resume.skills.map(item => (
                                                         <Level key={item.id} title={item.title} level={item.level} />
@@ -223,7 +223,7 @@ function Home() {
                                             <div className="card-header dark:border-gray-700 dark:text-gray-100">
                                                 {t("languages")}
                                             </div>
-                                            <div className="card-body">
+                                            <div className="card-body thin-font">
                                                 <div className="flex flex-wrap ">
                                                     {resume.languages.map(item => (
                                                         <Level key={item.id} title={item.title} level={item.level} />

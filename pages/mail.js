@@ -115,10 +115,10 @@ const Mail = () => {
                             <div className="card dark:bg-gray-800 dark:border-gray-700">
                                 <div className="card-body">
                                     <form onSubmit={submitForm} className="p-2">
-                                        <h1 className="w-full text-center mt-4 uppercase text-lg font-semibold main-text-color">
+                                        <h1 className="w-full text-center mt-4 uppercase text-lg font-semibold main-text-color tracking-wider">
                                             {t("emailMe")}
                                         </h1>
-                                        <div>
+                                        <div className="thin-font">
                                             <Input 
                                                 title={t("name")}
                                                 placeholder={t("namePlaceholder")}
