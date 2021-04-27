@@ -1,6 +1,7 @@
 ## About project
 Flexible personal resume website
-Here is an [Example](https://edkr.site)
+
+Exmple: [https://edkr.site](https://edkr.site)
 
 ### Description
 I decided to do this project because I couldn't find free high-quality resume builders. A resume is essential when looking for a job.
