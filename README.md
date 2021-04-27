@@ -39,10 +39,11 @@ ADMIN_PASS='pass'
 ```
 
 ## Customization
-Project has thee data files:
-1. locales.json
-2. personal_data.json
-3. projects.json
+Project has four data files:
+1. [https://github.com/hopstee/personal_website/blob/main/data/locales.json](locales.json)
+2. [https://github.com/hopstee/personal_website/blob/main/data/personal_data.json](personal_data.json)
+3. [https://github.com/hopstee/personal_website/blob/main/data/projects.json](projects.json)
+4. [https://github.com/hopstee/personal_website/blob/main/translations/translations.js](translations.js)
 
 ### locales.json
 ```bash
@@ -186,6 +187,20 @@ Project has thee data files:
         },
     }
 ]
+```
+
+### translations.js
+```bash
+export const Translations = {
+    en: {
+        hello: "Hello",
+        ...
+    },
+    ru: {
+        hello: "Привет",
+        ...
+    }
+}
 ```
 
 ## Deploy on Vercel
