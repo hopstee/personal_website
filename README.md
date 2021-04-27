@@ -40,10 +40,10 @@ ADMIN_PASS='pass'
 
 ## Customization
 Project has four data files:
-1. [https://github.com/hopstee/personal_website/blob/main/data/locales.json](locales.json)
-2. [https://github.com/hopstee/personal_website/blob/main/data/personal_data.json](personal_data.json)
-3. [https://github.com/hopstee/personal_website/blob/main/data/projects.json](projects.json)
-4. [https://github.com/hopstee/personal_website/blob/main/translations/translations.js](translations.js)
+1. [locales.json](https://github.com/hopstee/personal_website/blob/main/data/locales.json)
+2. [personal_data.json](https://github.com/hopstee/personal_website/blob/main/data/personal_data.json)
+3. [projects.json](https://github.com/hopstee/personal_website/blob/main/data/projects.json)
+4. [translations.js](https://github.com/hopstee/personal_website/blob/main/translations/translations.js)
 
 ### locales.json
 ```bash
