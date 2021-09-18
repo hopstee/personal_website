@@ -13,8 +13,20 @@
                         "ExpressJS",
                         "Tailwind"
                     ],
-                    "link": "https://edkr.site/",
+                    "link": "https://edkr-hopstee.vercel.app",
                     "code": "https://github.com/hopstee/personal_website"
+                },
+                {
+                    "title": "Countries information",
+                    "desc": "Common information about all countries of the world",
+                    "stack": [
+                        "JavaScript",
+                        "JSON",
+                        "NextJS",
+                        "Tailwind"
+                    ],
+                    "link": "https://countries-drab.vercel.app/",
+                    "code": "https://github.com/hopstee/countries"
                 }
             ]
         },
@@ -33,6 +45,18 @@
                     ],
                     "link": "https://edkr.site/",
                     "code": "https://github.com/hopstee/personal_website"
+                },
+                {
+                    "title": "Информация о странах",
+                    "desc": "Общая информация о всех странах мира",
+                    "stack": [
+                        "JavaScript",
+                        "JSON",
+                        "NextJS",
+                        "Tailwind"
+                    ],
+                    "link": "https://countries-drab.vercel.app/",
+                    "code": "https://github.com/hopstee/countries"
                 }
             ]
         }
