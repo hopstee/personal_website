@@ -1,31 +1,207 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+## About project
+Flexible personal resume website
+
+Example: [https://edkr.site](https://edkr.site)
+
+### Description
+I decided to do this project because I couldn't find free high-quality resume builders. A resume is essential when looking for a job.
 
 ## Getting Started
 
-First, run the development server:
+Clone the repository locally
+
+```bash
+git clone https://github.com/hopstee/personal_website.git
+```
+
+Run the development server:
 
 ```bash
 npm run dev
-# or
-yarn dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+You can configure port in .env file
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+Configure enviroment variables
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+```bash
+PORT=3000
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+EMAIL_ADDR='your_email'
+EMAIL_PASS='email_pass'
 
-## Learn More
+SENDGRID_API='https://api.sendgrid.com/v3/mail/send'
+SENDGRID_API_KEY='sendgrid_api_key'
 
-To learn more about Next.js, take a look at the following resources:
+ADMIN_NAME='name'
+ADMIN_PASS='pass'
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Customization
+Project has four data files:
+1. [locales.json](https://github.com/hopstee/personal_website/blob/main/data/locales.json)
+2. [personal_data.json](https://github.com/hopstee/personal_website/blob/main/data/personal_data.json)
+3. [projects.json](https://github.com/hopstee/personal_website/blob/main/data/projects.json)
+4. [translations.js](https://github.com/hopstee/personal_website/blob/main/translations/translations.js)
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+### locales.json
+```bash
+[
+    {
+        "abr": "ru", 
+        "name": "Русский"
+    }, 
+    {
+        ...
+    },
+]
+```
+
+### personal_data.json
+```bash
+{
+    "en": {
+        "personal": {
+            "name": "",
+            "bio": "",
+            "age": 21,
+            "phone": "",
+            "email": "",
+            "city": "",
+            "country": "",
+            "start_work": "Y-m-d"
+        },
+        "about": "",
+        "experience": [
+            {
+                "id": "",
+                "position": "",
+                "company": "",
+                "city": "",
+                "about": "",
+                "time": {
+                    "from": "",
+                    "to": ""
+                }
+            },
+            {
+                ...
+            },
+        ],
+        "studies": [
+            {
+                "id": "",
+                "grade": "",
+                "university": "",
+                "city": "",
+                "about": "",
+                "time": {
+                    "from": "",
+                    "to": ""
+                }
+            }
+        ],
+        "certificates": [],
+        "skills": [
+            {
+                "id": "",
+                "title": "",
+                "level": ""
+            },
+            {
+                ...
+            },
+        ],
+        "links": [
+            {
+                "id": "",
+                "title": "",
+                "link": ""
+            },
+            {
+                ...
+            },
+        ],
+        "languages": [
+            {
+                "id": "",
+                "title": "",
+                "level": ""
+            },
+            {
+                ...
+            },
+        ]
+    },
+    "ru": {
+        ...
+    },
+}
+```
+
+### projects.json
+```bash
+[
+    {
+        "en": {
+            "title": "Personal projects",
+            "projects": [
+                {
+                    "title": "",
+                    "desc": "",
+                    "stack": [
+                        "JavaScript",
+                        "JSON",
+                        ...
+                    ],
+                    "link": "",
+                    "code": ""
+                }
+            ]
+        },
+        "ru": {
+            ...
+        },
+    },
+    {
+        "en": {
+            "title": "Other projects",
+            "projects": [    
+                {
+                    "title": "",
+                    "desc": "",
+                    "stack": [
+                        
+                    ],
+                    "link": "",
+                    "code": ""
+                },
+                {
+                    ...
+                }
+            ]
+        },
+        "ru": {
+            ...
+        },
+    }
+]
+```
+
+### translations.js
+```bash
+export const Translations = {
+    en: {
+        hello: "Hello",
+        ...
+    },
+    ru: {
+        hello: "Привет",
+        ...
+    }
+}
+```
 
 ## Deploy on Vercel
 
