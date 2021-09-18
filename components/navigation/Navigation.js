@@ -25,7 +25,6 @@ function Navigation(props) {
 
     const [locale, setLocale] = useContext(LanguageContext);
     const { theme, setTheme } = useTheme();
-    console.log(theme)
     const [isMounted, setIsMounted] = useState(false);
     const [isOpen, setIsOpen] = useState(false);
 
@@ -72,7 +71,7 @@ function Navigation(props) {
                     header={t("settings")}
                     body={
                         <div className="relative overflow-x-hidden">
-                            <div className="inline-block space-y-2 w-full h-48 transition-all duration-150" id="settings_block">
+                            <div className="inline-block space-y-2 w-full transition-all duration-150" id="settings_block">
                                 <div onClick={switchTheme}>
                                     {theme === "light" ? (
                                         <div className="settings-item dark:hover:bg-gray-700 text-gray-900 dark:text-gray-100">

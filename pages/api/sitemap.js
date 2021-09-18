@@ -38,7 +38,6 @@ export default async(req, res) => {
     
         res.end(sitemapOutput);
     } catch(e) {
-        console.log(e)
         res.send(JSON.stringify(e))
     }
 }

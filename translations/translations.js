@@ -27,6 +27,7 @@ export const Translations = {
         emailPlaceholder: "your@email.com",
         message: "Message",
         messagePlaceholder: "Hello!",
+        back: "Back",
     },
     ru: {
         experience: "Опыт",
@@ -56,5 +57,6 @@ export const Translations = {
         emailPlaceholder: "your@email.com",
         message: "Сообщение",
         messagePlaceholder: "Привет!",
+        back: "Назад",
     }
 }

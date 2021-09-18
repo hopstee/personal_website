@@ -21,14 +21,12 @@ var projects_data;
 fs.readFile(process.cwd() + '/data/personal_data.json', 'utf8', function(err, data) {
     if(err) throw err;
     personal_data = JSON.parse(data);
-    console.log(personal_data);
 });
 
 // read projects.json file
 fs.readFile(process.cwd() + '/data/projects.json', 'utf8', function(err, data) {
     if(err) throw err;
     projects_data = JSON.parse(data);
-    console.log(projects_data);
 });
     
 app.prepare()
